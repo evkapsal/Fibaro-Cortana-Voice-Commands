@@ -1,0 +1,2 @@
+"Fibaro Cortana Voice Commands", Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  Fibaro_Cortana_Voice_Commands.Assets.fibaro.png

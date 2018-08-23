@@ -1,0 +1,16 @@
+/osver:6.2
+/appcontainer
+/runtime:mrt100_app
+/eh:clr
+/pdb
+"/nativeLink:C:\Users\Vangelis\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Native\vmath.lib"
+/customImports
+/methodBodyFolding
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\MDIL\Fibaro Cortana Voice Commands.mdilexe"
+"/i:C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\MDIL"
+"/out:C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\Native\Fibaro Cortana Voice Commands.exe"
+"/pdbAltPath:C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Release\ilc"
+"/res:C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\Native.res"
+"/i:C:\Users\Vangelis\.nuget\packages\microsoft.net.native.sharedlibrary-x86\1.7.0\tools\SharedLibrary\ret\MDIL"
+/shimexe
+"/classlib:SharedLibrary"

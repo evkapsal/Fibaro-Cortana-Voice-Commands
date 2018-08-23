@@ -1,0 +1,8 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-400"
+"ResourceDimensions"		"scale-400"
+
+[Files]
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\split.scale-400.pri"			"resources.pri"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\PackageLayout\Assets\SplashScreen.scale-400.png"			"Assets\SplashScreen.scale-400.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\PackageLayout\Assets\Splash.scale-400.png"			"Assets\Splash.scale-400.png"

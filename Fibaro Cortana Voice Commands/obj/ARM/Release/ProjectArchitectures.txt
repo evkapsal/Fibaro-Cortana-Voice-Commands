@@ -1,0 +1,1 @@
+C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands.csproj;arm

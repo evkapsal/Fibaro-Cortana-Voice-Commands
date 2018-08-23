@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <!--
+  name = IP of your fibaro HCL/HC2
+  Username = fibaro device Username
+  Passwors = your Password
+  id = fibaro device id
+  -->
+  <Host key="home" name="192.168.1.230" username="apiuser" password="!Apiuser!2" />
+  <Host key="main" id="7" />
+  <Host key="dinning" id="27" />
+  <Host key="hallway" id="178" />
+  <Host key="balcony" id="152" />
+  <Host key="visitor" id="225" />
+  <Host key="bathroom" id="122" />
+  <Host key="side" id="230" />
+  
+  <!--
+  Examples on how you can start the Custom Voice Commands:
+  With the prefix bellow [Voice Command] Cortana will understands that Custom Command from Fibaro Voice Command Universal Windows Application with start:
+  CommandPrefix = [Home]
+  #Example:
+  Home -> Open main lights
+  Voice Tip:- Try to say it like one sentence -
+  
+  
+  #Dimmer Values in Low: 25
+  #Dimmer Values in Medium : 50
+  Voice Command -Supported-
+  Main Room Lights Commands:
+  - Open main lights 
+  - Close main lights 
+  - Increase main lights 
+  - Decrease main lights 
+  - main low 
+  - main medium 
+  Dinning Room Lights Commands:
+  - Open dinning lights 
+  - Close dinning lights 
+  - Increase dinning lights 
+  - Decrease dinning lights 
+  - dinning low 
+  - dinning medium
+  Balcony Room Lights Commands:
+  - Open balcony lights 
+  - Close balcony lights 
+  - Increase balcony lights 
+  - Decrease balcony lights 
+  - balcony low 
+  - balcony medium
+  Visitor Room Lights Commands:
+  - Open visitor lights 
+  - Close visitor lights 
+  - Increase visitor lights 
+  - Decrease visitor lights 
+  - visitor low 
+  - visitor medium
+   Hallway Lights Commands:
+  - Open hallway lights 
+  - Close hallway lights 
+  - Increase hallway lights 
+  - Decrease hallway lights 
+  - hallway low 
+  - hallway medium
+   Bathroom Lights Commands:
+  - Open bathroom lights 
+  - Close bathroom lights 
+  - Increase bathroom lights 
+  - Decrease bathroom lights 
+  - bathroom low 
+  - bathroom medium
+  Side Light Commands:
+  - Open side lights 
+  - Close side lights 
+
+  -->
+</Settings>

@@ -1,0 +1,11 @@
+/out:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\SgGenerated\\"
+/int:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\\"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\PreMergeILTransformed"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\intermediate\TransformedSRWR"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\in"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\in\\"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\in\\"
+/ref:"C:\Users\Vangelis\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\lib\Private\\"
+/ref:"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Release\ilc\in\WinMetadata"
+/ca:System.Private.CoreLib
+/cscpath:"C:\Users\Vangelis\.nuget\packages\microsoft.net.native.compiler\1.7.3\tools\x86\ilc\csc"

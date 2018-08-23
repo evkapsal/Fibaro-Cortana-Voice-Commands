@@ -1,0 +1,148 @@
+﻿<Page
+    x:Class="Fibaro_Cortana_Voice_Commands.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Fibaro_Cortana_Voice_Commands"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="1000" d:DesignWidth="800"
+    >
+
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- Main Lights-->
+        <StackPanel Grid.Row="0">
+            <Image x:ConnectionId='66' x:Name="cortana" Source="Assets/cortana.png" Height="100" Width="150" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="3">
+            <Image x:ConnectionId='65' x:Name="cortana2" Source="Assets/cortana2.png" Height="100" Width="150" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.ColumnSpan="4" >
+            <Image x:ConnectionId='61' x:Name="image" Source="Assets/fibaroOposite.png" Height="120" Width="200"/>
+            <Border x:ConnectionId='62' x:Name="ContentPanel1" BorderThickness="0,0,1,1" BorderBrush="#D0CEBF" />
+            <TextBlock x:ConnectionId='63' x:Name="FibaroControlTitle" Text="Fibaro Voice Control Commands" FontSize="22" Foreground="White" HorizontalAlignment="Center"/>
+            <Border x:ConnectionId='64' x:Name="ContentPane2" BorderThickness="0,0,1,1" BorderBrush="#D0CEBF" />
+        </StackPanel>
+        <StackPanel  Grid.Row="1" Grid.Column="0" >
+            <TextBlock x:ConnectionId='58' x:Name="MainLightsOnOff" Text="Main Lights On/Off" Foreground="White" FontSize="20" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='59' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                     />
+            <Button x:ConnectionId='60' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                       />
+        </StackPanel>
+        <StackPanel  Grid.Row="1" Grid.Column="1" >
+            <TextBlock x:ConnectionId='55' x:Name="MainLightsDimm" Text="Main Lights Dimmer" Foreground="White" FontSize="20" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='56' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='57' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="1" Grid.Column="2" >
+            <TextBlock x:ConnectionId='52' x:Name="MainLightsPreset" Text="Main Lights Preset" Foreground="White" FontSize="20" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='53' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='54' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <!-- Dinning Lights-->
+        <StackPanel  Grid.Row="1" Grid.Column="3" >
+            <TextBlock x:ConnectionId='49' x:Name="DinLightsOnOff" Text="Dinning Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='50' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"              />
+            <Button x:ConnectionId='51' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="2" Grid.Column="0" >
+            <TextBlock x:ConnectionId='46' x:Name="DinLightsDimm" Text="Dinning Lights Dimmer" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='47' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='48' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="2" Grid.Column="1">
+            <TextBlock x:ConnectionId='43' x:Name="DinLightsPreset" Text="Dinning Lights Preset" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='44' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                   />
+            <Button x:ConnectionId='45' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                   />
+        </StackPanel>
+        <!-- Balcony Lights-->
+        <StackPanel  Grid.Row="2" Grid.Column="2" >
+            <TextBlock x:ConnectionId='40' x:Name="BalLightsOnOff" Text="Balcony Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='41' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"               />
+            <Button x:ConnectionId='42' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <StackPanel  Grid.Row="2" Grid.Column="3" >
+            <TextBlock x:ConnectionId='37' x:Name="BalLightsDimm" Text="Balcony Lights Dimmer" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='38' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='39' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"              />
+        </StackPanel>
+        <StackPanel  Grid.Row="3" Grid.Column="0">
+            <TextBlock x:ConnectionId='34' x:Name="BalLightsPreset" Text="Balcony Lights Preset" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='35' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                   />
+            <Button x:ConnectionId='36' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                      />
+        </StackPanel>
+        <!-- Hallway Lights-->
+        <StackPanel  Grid.Row="3" Grid.Column="1" >
+            <TextBlock x:ConnectionId='31' x:Name="HallwayLightsOnOff" Text="Hallway Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='32' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"               />
+            <Button x:ConnectionId='33' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <StackPanel  Grid.Row="3" Grid.Column="2" >
+            <TextBlock x:ConnectionId='28' x:Name="HallwayLightsDimm" Text="Hallway Lights Dimmer" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='29' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='30' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="3" Grid.Column="3">
+            <TextBlock x:ConnectionId='25' x:Name="HallwayLightsPreset" Text="Hallway Lights Preset" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='26' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                   />
+            <Button x:ConnectionId='27' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                      />
+        </StackPanel>
+        <!-- Side Light-->
+        <StackPanel  Grid.Row="4" Grid.Column="0" >
+            <TextBlock x:ConnectionId='22' x:Name="SideLightsOnOff" Text="Side Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='23' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"               />
+            <Button x:ConnectionId='24' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <!-- Visitor Lights-->
+        <StackPanel  Grid.Row="4" Grid.Column="1" >
+            <TextBlock x:ConnectionId='19' x:Name="VisitorLightsOnOff" Text="Visitor Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='20' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"              />
+            <Button x:ConnectionId='21' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="4" Grid.Column="2" >
+            <TextBlock x:ConnectionId='16' x:Name="VisitorLightsDimm" Text="Visitor Lights Dimmer" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='17' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='18' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"               />
+        </StackPanel>
+        <StackPanel  Grid.Row="4" Grid.Column="3">
+            <TextBlock x:ConnectionId='13' x:Name="VisitorLightsPreset" Text="Visitor Lights Preset" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='14' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                   />
+            <Button x:ConnectionId='15' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                      />
+        </StackPanel>
+        <!-- Bathroom Lights-->
+        <StackPanel  Grid.Row="5" Grid.Column="0" >
+            <TextBlock x:ConnectionId='10' x:Name="BathLightsOnOff" Text="Bath Lights On/Off" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='11' Content="Lights ON" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"               />
+            <Button x:ConnectionId='12' Content="Lights OFF" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <StackPanel  Grid.Row="5" Grid.Column="1" >
+            <TextBlock x:ConnectionId='7' x:Name="BathLightsDimm" Text="Bath Lights Dimmer" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='8' Content="Dim High" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                />
+            <Button x:ConnectionId='9' Content="Dim Low" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                />
+        </StackPanel>
+        <StackPanel  Grid.Row="5" Grid.Column="2">
+            <TextBlock x:ConnectionId='4' x:Name="BathLightsPreset" Text="Bath Lights Preset" Foreground="White" FontSize="18" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Button x:ConnectionId='5' Content="Low" FontSize="16" Foreground="Green" Background="SkyBlue" BorderThickness="1" BorderBrush="Blue" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,10,40,10"                    />
+            <Button x:ConnectionId='6' Content="Medium" FontSize="16" Foreground="Red" Background="DarkSlateGray" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Center" Height="40" Width="100"  Margin="40,0,40,10"                      />
+        </StackPanel>
+        <StackPanel  Grid.Row="5" Grid.Column="3">
+            <TextBlock x:ConnectionId='1' x:Name="more" Text="More Commands Soon..." Foreground="White" FontSize="16" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
+            <Image x:ConnectionId='2' x:Name="Home" Source="Assets/FibaroHome.png" Height="100" Width="100" HorizontalAlignment="Center" Margin="20,0,20,0"/>
+            <TextBlock x:ConnectionId='3' x:Name="sign" Text="github.com/evkapsal" Foreground="White" FontStyle="Italic" FontSize="16" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Width="160" HorizontalAlignment="Right"/>
+        </StackPanel>
+    </Grid>
+</Page>
+

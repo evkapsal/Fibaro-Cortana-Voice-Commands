@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="CustomCommands">
+   <CommandPrefix> hey </CommandPrefix>
+    <Example> Open Room Lights, Increase Room Lights </Example>
+
+    <!--Main Room Voice Commands-->
+    <Command Name="TurnOnMainLights">
+      <Example> main light on </Example>
+      <ListenFor> main light on</ListenFor>
+      <Feedback> Turning On your Main Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffMainLights">
+      <Example> main light off </Example>
+      <ListenFor> main light off</ListenFor>
+      <Feedback> Turning Off your Main Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseMainLights">
+      <Example> main dim high </Example>
+      <ListenFor> main dim high</ListenFor>
+      <Feedback>Increase level in your Main Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseMainLights">
+      <Example> main dim low </Example>
+      <ListenFor>main dim low</ListenFor>
+      <Feedback> Decrease level in your main lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="MainLightsLow">
+      <Example> main low </Example>
+      <ListenFor> main low</ListenFor>
+      <Feedback>Set level in your main lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="MainLightsMedium">
+      <Example> main medium </Example>
+      <ListenFor> main medium</ListenFor>
+      <Feedback> Set level in your main lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <!--Dinning Room Voice Commands-->
+    <Command Name="TurnOnDinningLights">
+      <Example> Open dinning lights </Example>
+      <ListenFor> Open dinning lights</ListenFor>
+      <Feedback> Turning On your dinning Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffDinningLights">
+      <Example> Close dinning lights </Example>
+      <ListenFor> Close dinning lights</ListenFor>
+      <Feedback> Turning Off your dinning Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseDinningLights">
+      <Example> Increase dinning lights </Example>
+      <ListenFor> Increase dinning lights</ListenFor>
+      <Feedback>Increase level in your dinning Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseDinningLights">
+      <Example> Decrease dinning lights </Example>
+      <ListenFor> Decrease dinning lights</ListenFor>
+      <Feedback> Decrease level in your dinning lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DinningLightsLow">
+      <Example> dinning low </Example>
+      <ListenFor> dinning low</ListenFor>
+      <Feedback>Set level in your dinning lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DinningLightsMedium">
+      <Example>dinning medium </Example>
+      <ListenFor>dinning medium</ListenFor>
+      <Feedback> Set level in your dinning lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+    
+        <!--Balcony Room Voice Commands-->
+    <Command Name="TurnOnBalconyLights">
+      <Example> Open balcony lights </Example>
+      <ListenFor> Open balcony lights</ListenFor>
+      <Feedback> Turning On your balcony Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffBalconyLights">
+      <Example> Close balcony lights </Example>
+      <ListenFor> Close balcony lights</ListenFor>
+      <Feedback> Turning Off your balcony Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseBalconyLights">
+      <Example> Increase balcony lights </Example>
+      <ListenFor> Increase balcony lights</ListenFor>
+      <Feedback>Increase level in your balcony Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseBalconyLights">
+      <Example> Decrease balcony lights </Example>
+      <ListenFor> Decrease balcony lights</ListenFor>
+      <Feedback> Decrease level in your balcony lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="BalconyLightsLow">
+      <Example> balcony low </Example>
+      <ListenFor> balcony low</ListenFor>
+      <Feedback>Set level in your balcony lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="BalconyLightsMedium">
+      <Example>balcony medium </Example>
+      <ListenFor>balcony medium</ListenFor>
+      <Feedback> Set level in your balcony lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+    
+      <!--Hall Room Voice Commands-->
+    <Command Name="TurnOnHallLights">
+      <Example> Open hallway lights </Example>
+      <ListenFor> Open hallway lights</ListenFor>
+      <Feedback> Turning On your hallway Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffHallLights">
+      <Example> Close hallway lights </Example>
+      <ListenFor> Close hallway lights</ListenFor>
+      <Feedback> Turning Off your hallway Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseHallLights">
+      <Example> Increase hallway lights </Example>
+      <ListenFor> Increase hallway lights</ListenFor>
+      <Feedback>Increase level in your hallway Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseHallLights">
+      <Example> Decrease hallway lights </Example>
+      <ListenFor> Decrease hallway lights</ListenFor>
+      <Feedback> Decrease level in your hallway lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="HallLightsLow">
+      <Example> hallway low </Example>
+      <ListenFor> hallway low</ListenFor>
+      <Feedback>Set level in your hall lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="HallLightsMedium">
+      <Example>hallway medium </Example>
+      <ListenFor>hallway medium</ListenFor>
+      <Feedback> Set level in your hall lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <!--Side Light Voice Commands-->
+    <Command Name="TurnOnSideLight">
+      <Example> Open side light </Example>
+      <ListenFor> Open side light</ListenFor>
+      <Feedback> Turning On your side light </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffSideLight">
+      <Example> Close side light </Example>
+      <ListenFor> Close side light</ListenFor>
+      <Feedback> Turning Off your side light </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <!--Visitor Bathroom Voice Commands-->
+    <Command Name="TurnOnVisitorLights">
+      <Example> Open visitor lights </Example>
+      <ListenFor> Open visitor lights</ListenFor>
+      <Feedback> Turning On your visitor Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffVisitorLights">
+      <Example> Close visitor lights </Example>
+      <ListenFor> Close visitor lights</ListenFor>
+      <Feedback> Turning Off your visitor Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseVisitorLights">
+      <Example> Increase visitor lights </Example>
+      <ListenFor> Increase visitor lights</ListenFor>
+      <Feedback>Increase level in visitor hall Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseVisitorLights">
+      <Example> Decrease visitor lights </Example>
+      <ListenFor> Decrease visitor lights</ListenFor>
+      <Feedback> Decrease level in visitor hall lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="VisitorLightsLow">
+      <Example> visitor low </Example>
+      <ListenFor> visitor low</ListenFor>
+      <Feedback>Set level in your visitor lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="VisitorLightsMedium">
+      <Example>visitor medium </Example>
+      <ListenFor>visitor medium</ListenFor>
+      <Feedback> Set level in your visitor lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+    
+   <!--Bathroom Voice Commands-->
+    <Command Name="TurnOnBathroomLights">
+      <Example> Open bathroom lights </Example>
+      <ListenFor> Open bathroom lights</ListenFor>
+      <Feedback> Turning On your bathroom Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="TurnOffBathroomLights">
+      <Example> Close bathroom lights </Example>
+      <ListenFor> Close bathroom lights</ListenFor>
+      <Feedback> Turning Off your bathroom Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+     <Command Name="IncreaseBathroomLights">
+      <Example> Increase bathroom lights </Example>
+      <ListenFor> Increase bathroom lights</ListenFor>
+      <Feedback>Increase level in bathroom hall Lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="DecreaseBathroomLights">
+      <Example> Decrease bathroom lights </Example>
+      <ListenFor> Decrease bathroom lights</ListenFor>
+      <Feedback> Decrease level in bathroom hall lights </Feedback>
+      <Navigate/>
+    </Command>
+    
+  <Command Name="BathroomLightsLow">
+      <Example> bathroom low </Example>
+      <ListenFor> bathroom low</ListenFor>
+      <Feedback>Set level in your bathroom lights to low </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="BathroomLightsMedium">
+      <Example>bathroom medium </Example>
+      <ListenFor>bathroom medium</ListenFor>
+      <Feedback> Set level in your bathroom lights to medium </Feedback>
+      <Navigate/>
+    </Command>
+
+  </CommandSet>  
+
+</VoiceCommands>

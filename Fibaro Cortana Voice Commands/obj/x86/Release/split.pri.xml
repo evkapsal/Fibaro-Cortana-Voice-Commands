@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="d66fb743-2e89-4405-b482-9c3e7bc98040" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>200</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="AppSettings.xml" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/AppSettings.xml">
+				<Candidate type="Path">
+					<Value>AppSettings.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CustomVoiceCommandDefinitions.xml" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/CustomVoiceCommandDefinitions.xml">
+				<Candidate type="Path">
+					<Value>CustomVoiceCommandDefinitions.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Fibaro Cortana Voice Commands.xr.xml" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Fibaro Cortana Voice Commands.xr.xml">
+				<Candidate type="Path">
+					<Value>Fibaro Cortana Voice Commands.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/MainPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="cortana.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/cortana.png">
+					<Candidate type="Path">
+						<Value>Assets\cortana.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Cortana2.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Cortana2.png">
+					<Candidate type="Path">
+						<Value>Assets\Cortana2.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FibaroHome.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/FibaroHome.png">
+					<Candidate type="Path">
+						<Value>Assets\FibaroHome.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="fibaroOposite.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/fibaroOposite.png">
+					<Candidate type="Path">
+						<Value>Assets\fibaroOposite.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash.png"/>
+				<NamedResource name="Splash1240x1240.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash1240x1240.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash1240x1240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash142x142.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash142x142.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash142x142.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash24x24.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash24x24.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash24x24.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash300x300.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash300x300.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash300x300.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash310x150.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash310x150.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash310x150.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash310x310.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash310x310.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash310x310.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash44x44.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash44x44.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash44x44.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash48x48.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash48x48.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash48x48.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash50x50.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash50x50.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash50x50.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash600x600-400.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash600x600-400.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash600x600-400.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash620x300.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash620x300.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash620x300.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash620x620.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Splash620x620.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash620x620.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/SplashScreen.png"/>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Square44x44Logo.png"/>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/StoreLogo.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://d66fb743-2e89-4405-b482-9c3e7bc98040/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
