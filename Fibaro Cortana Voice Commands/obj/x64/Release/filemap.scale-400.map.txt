@@ -1,0 +1,13 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-400"
+"ResourceDimensions"		"scale-400"
+
+[Files]
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\filemap.scale-400.pri"			"resources.pri"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Square44x44Logo.scale-400.png"			"Assets\Square44x44Logo.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\SplashScreen.scale-400.png"			"Assets\SplashScreen.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Splash620x300.scale-400.png"			"Assets\Splash620x300.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Splash50x50.scale-400.png"			"Assets\Splash50x50.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Splash48x48.scale-400.png"			"Assets\Splash48x48.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Splash300x300.scale-400.png"			"Assets\Splash300x300.scale-400.png"
+"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\PackageLayout\Assets\Splash142x142.scale-400.png"			"Assets\Splash142x142.scale-400.png"

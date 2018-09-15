@@ -92,7 +92,7 @@ namespace Fibaro_Cortana_Voice_Commands
 
         private void dinningmed(object sender, RoutedEventArgs e)
         {
-            CortanaFibaroVoice.vcdLookup["DinningMainMedium"].DynamicInvoke();
+            CortanaFibaroVoice.vcdLookup["DinningLightsMedium"].DynamicInvoke();
         }
 
         private void balcon(System.Object sender, RoutedEventArgs e)
@@ -224,5 +224,13 @@ namespace Fibaro_Cortana_Voice_Commands
         {
             CortanaFibaroVoice.vcdLookup["BathroomLightsMedium"].DynamicInvoke();
         }
+
+        private void SettingsPage1(object sender, RoutedEventArgs e)
+        {
+            //Open Popup
+            
+            settingsPopup.IsOpen = true;
+        }
+
     }
 }

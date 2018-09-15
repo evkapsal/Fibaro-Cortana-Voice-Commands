@@ -3,9 +3,16 @@
   <PropertyGroup>
     <AppxPackageIsForStore>False</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <AppxBuildConfigurationSelection>x64</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
-    <SplashScreenSource>C:\Users\Vangelis\Pictures\Fibaro App\Splash620x300.png</SplashScreenSource>
+    <SplashScreenSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</SplashScreenSource>
+    <SmallTileSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</MediumTileSource>
+    <WideTileSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</WideTileSource>
+    <LargeTileSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</LargeTileSource>
+    <AppIconSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</AppIconSource>
+    <BadgeLogoSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</BadgeLogoSource>
+    <PackageLogoSource>C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Assets\Splash400x400_v2.png</PackageLogoSource>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>

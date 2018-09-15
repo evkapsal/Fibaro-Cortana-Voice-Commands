@@ -1,1 +1,5 @@
-MainPackage=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Debug\Fibaro Cortana Voice Commands_1.0.0.0_x64_Debug.appx
+MainPackage=C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Release\Fibaro Cortana Voice Commands_1.0.16.0_x64.appx
+ResourcePack=C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Release\Fibaro Cortana Voice Commands_1.0.16.0_scale-100.appx
+ResourcePack=C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Release\Fibaro Cortana Voice Commands_1.0.16.0_scale-125.appx
+ResourcePack=C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Release\Fibaro Cortana Voice Commands_1.0.16.0_scale-150.appx
+ResourcePack=C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Release\Fibaro Cortana Voice Commands_1.0.16.0_scale-400.appx

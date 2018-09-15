@@ -1,9 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
 <VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
-  <CommandSet xml:lang="en-us" Name="CustomCommands">
-   <CommandPrefix> hey </CommandPrefix>
-    <Example> Open Room Lights, Increase Room Lights </Example>
+  <CommandSet xml:lang="en-us" Name="Cortana Voice Commands">
+   <CommandPrefix> room </CommandPrefix>
+    <Example> room main light on </Example>
 
     <!--Main Room Voice Commands-->
     <Command Name="TurnOnMainLights">
@@ -51,42 +50,42 @@
     <!--Dinning Room Voice Commands-->
     <Command Name="TurnOnDinningLights">
       <Example> dinning light on </Example>
-      <ListenFor> dinning light on</ListenFor>
+      <ListenFor> dining light on</ListenFor>
       <Feedback> Turning On your dinning Lights </Feedback>
       <Navigate/>
     </Command>
     
      <Command Name="TurnOffDinningLights">
       <Example> dinning light off </Example>
-      <ListenFor>dinning light off</ListenFor>
+      <ListenFor>dining light off</ListenFor>
       <Feedback> Turning Off your dinning Lights </Feedback>
       <Navigate/>
     </Command>
     
      <Command Name="IncreaseDinningLights">
       <Example> dinning dim high</Example>
-      <ListenFor>dinning dim high</ListenFor>
+      <ListenFor>dining dim high</ListenFor>
       <Feedback>Increase level in your dinning Lights </Feedback>
       <Navigate/>
     </Command>
     
     <Command Name="DecreaseDinningLights">
       <Example> dinning dim low </Example>
-      <ListenFor> dinning dim hlow</ListenFor>
+      <ListenFor> dining dim low</ListenFor>
       <Feedback> Decrease level in your dinning lights </Feedback>
       <Navigate/>
     </Command>
     
     <Command Name="DinningLightsLow">
       <Example> dinning low </Example>
-      <ListenFor> dinning low</ListenFor>
+      <ListenFor> dining low</ListenFor>
       <Feedback>Set level in your dinning lights to low </Feedback>
       <Navigate/>
     </Command>
     
     <Command Name="DinningLightsMedium">
       <Example>dinning medium </Example>
-      <ListenFor>dinning medium</ListenFor>
+      <ListenFor>dining medium</ListenFor>
       <Feedback> Set level in your dinning lights to medium </Feedback>
       <Navigate/>
     </Command>

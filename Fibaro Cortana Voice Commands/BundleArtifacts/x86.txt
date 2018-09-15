@@ -1,0 +1,6 @@
+MainPackage=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Debug\Fibaro Cortana Voice Commands_1.0.10.0_x86_Debug.appx
+SymbolPackage=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\AppPackages\Fibaro Cortana Voice Commands_1.0.10.0_Debug_Test\Fibaro Cortana Voice Commands_1.0.10.0_x86_Debug.appxsym
+ResourcePack=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Debug\Fibaro Cortana Voice Commands_1.0.10.0_scale-100.appx
+ResourcePack=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Debug\Fibaro Cortana Voice Commands_1.0.10.0_scale-125.appx
+ResourcePack=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Debug\Fibaro Cortana Voice Commands_1.0.10.0_scale-150.appx
+ResourcePack=C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x86\Debug\Fibaro Cortana Voice Commands_1.0.10.0_scale-400.appx

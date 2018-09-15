@@ -9,9 +9,15 @@ using System.Runtime.InteropServices.WindowsRuntime;
 
 [assembly: global::System.Runtime.InteropServices.McgGeneratedAssembly]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Runtime.WindowsRuntime")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("Microsoft.AspNetCore.Cryptography.Internal")]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Text.Encoding.CodePages")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Cryptography.Algorithms")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Principal.Windows")]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.IO.FileSystem")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Cryptography.Encoding")]
 [assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Threading.Overlapped")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Cryptography.X509Certificates")]
+[assembly: global::System.Runtime.CompilerServices.IgnoresAccessChecksTo("System.Security.Cryptography.Cng")]
 
 
 // -----------------------------------------------------------------------------------------------------------

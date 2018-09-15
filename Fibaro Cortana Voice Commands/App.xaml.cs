@@ -30,7 +30,7 @@ namespace Fibaro_Cortana_Voice_Commands
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            //this.Suspending += OnSuspending;
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace Fibaro_Cortana_Voice_Commands
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        
+
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
@@ -76,9 +76,15 @@ namespace Fibaro_Cortana_Voice_Commands
                 rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // Ensure the current window is active
-            Window.Current.Activate();
-
-            CortanaFibaroVoice.RegisterVCD();
+            try
+            {
+                Window.Current.Activate();
+                CortanaFibaroVoice.RegisterVCD();
+            }
+            catch(Exception er)
+            {
+                System.Diagnostics.Debug.WriteLine("There was an error registering the Voice Command Definitions", er);
+            }
         }
 
         /// 

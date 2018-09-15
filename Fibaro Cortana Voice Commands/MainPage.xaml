@@ -8,7 +8,6 @@
     mc:Ignorable="d"
     d:DesignHeight="1000" d:DesignWidth="800"
     >
-
     <Grid Background="Black">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -30,6 +29,9 @@
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="3">
             <Image x:Name="cortana2" Source="Assets/cortana2.png" Height="100" Width="150" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <AppBarButton Icon="Admin" Label="Settings" Background="Black" Foreground="White" Margin="5,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Click="SettingsPage1" Height="60" Width="60"/>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="4" >
             <Image x:Name="image" Source="Assets/fibaroOposite.png" Height="120" Width="200"/>
@@ -141,7 +143,17 @@
         <StackPanel  Grid.Row="5" Grid.Column="3">
             <TextBlock x:Name="more" Text="More Commands Soon..." Foreground="White" FontSize="16" Margin="10,5,10,10" RenderTransformOrigin="0.5,0.5" Width="180" HorizontalAlignment="Center"/>
             <Image x:Name="Home" Source="Assets/FibaroHome.png" Height="100" Width="100" HorizontalAlignment="Center" Margin="20,0,20,0"/>
-            <TextBlock x:Name="sign" Text="github.com/evkapsal" Foreground="White" FontStyle="Italic" FontSize="16" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Width="160" HorizontalAlignment="Right"/>
+            <TextBlock x:Name="sign" Foreground="White" FontStyle="Italic" FontSize="16" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5" Width="160" HorizontalAlignment="Right">
+              <Hyperlink NavigateUri="https://github.com/evkapsal/Fibaro-Cortana-Voice-Commands" Foreground="White" >
+                  github.com/evkapsal
+                </Hyperlink>
+            </TextBlock>
+
+
         </StackPanel>
+
+        <Popup x:Name="settingsPopup" Width="800" Height="600" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="3">
+            <local:AppSettingsWindow HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Popup>
     </Grid>
 </Page>

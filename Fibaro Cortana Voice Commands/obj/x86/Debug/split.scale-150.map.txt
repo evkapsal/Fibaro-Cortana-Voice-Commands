@@ -1,0 +1,14 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-150"
+"ResourceDimensions"		"scale-150"
+
+[Files]
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\split.scale-150.pri"			"resources.pri"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Square44x44Logo.scale-150.png"			"Assets\Square44x44Logo.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\SplashScreen.scale-150.png"			"Assets\SplashScreen.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash620x620.scale-150.png"			"Assets\Splash620x620.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash620x300.scale-150.png"			"Assets\Splash620x300.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash50x50.scale-150.png"			"Assets\Splash50x50.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash48x48.scale-150.png"			"Assets\Splash48x48.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash300x300.scale-150.png"			"Assets\Splash300x300.scale-150.png"
+"C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x86\Debug\PackageLayout\Assets\Splash142x142.scale-150.png"			"Assets\Splash142x142.scale-150.png"

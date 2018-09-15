@@ -54,6 +54,2356 @@ using System.Runtime.InteropServices.WindowsRuntime;
 namespace __Interop
 {
 	/// <summary>
+	/// P/Invoke class for module 'bcrypt.dll'
+	/// </summary>
+	public unsafe static partial class bcrypt_dll
+	{
+		// Signature, BCryptCloseAlgorithmProvider, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptCloseAlgorithmProvider")]
+		public static int BCryptCloseAlgorithmProvider(
+					global::System.IntPtr hAlgorithm, 
+					uint dwFlags)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptCloseAlgorithmProvider(
+								hAlgorithm, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptCreateHash, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptCreateHash")]
+		public static int BCryptCreateHash(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal hAlgorithm, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal phHash, 
+					global::System.IntPtr pbHashObject, 
+					uint cbHashObject, 
+					byte* pbSecret, 
+					uint cbSecret, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_phHash;
+			int unsafe___value;
+			// Marshalling
+			hAlgorithm.DangerousAddRef(ref addRefed);
+			phHash = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_phHash = phHash.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptCreateHash(
+								hAlgorithm.DangerousGetHandle(), 
+								&(unsafe_phHash), 
+								pbHashObject, 
+								cbHashObject, 
+								((byte*)pbSecret), 
+								cbSecret, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phHash, 
+								unsafe_phHash
+							);
+			if (addRefed)
+				hAlgorithm.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDecrypt, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Microsoft_AspNetCore_Cryptography_Cng_BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal__BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptDecrypt")]
+		public static int BCryptDecrypt(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal hKey, 
+					byte* pbInput, 
+					uint cbInput, 
+					void* pPaddingInfo, 
+					byte* pbIV, 
+					uint cbIV, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					out uint pcbResult, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			uint unsafe_pcbResult;
+			int unsafe___value;
+			// Marshalling
+			hKey.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDecrypt(
+								hKey.DangerousGetHandle(), 
+								((byte*)pbInput), 
+								cbInput, 
+								((void*)pPaddingInfo), 
+								((byte*)pbIV), 
+								cbIV, 
+								((byte*)pbOutput), 
+								cbOutput, 
+								&(unsafe_pcbResult), 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbResult = unsafe_pcbResult;
+			if (addRefed)
+				hKey.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDeriveKeyPBKDF2, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] ulong__unsigned __int64, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptDeriveKeyPBKDF2")]
+		public static int BCryptDeriveKeyPBKDF2(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal hPrf, 
+					byte* pbPassword, 
+					uint cbPassword, 
+					byte* pbSalt, 
+					uint cbSalt, 
+					ulong cIterations, 
+					byte* pbDerivedKey, 
+					uint cbDerivedKey, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			hPrf.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDeriveKeyPBKDF2(
+								hPrf.DangerousGetHandle(), 
+								((byte*)pbPassword), 
+								cbPassword, 
+								((byte*)pbSalt), 
+								cbSalt, 
+								cIterations, 
+								((byte*)pbDerivedKey), 
+								cbDerivedKey, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			if (addRefed)
+				hPrf.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDestroyHash, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptDestroyHash")]
+		public static int BCryptDestroyHash(global::System.IntPtr hHash)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDestroyHash(hHash);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDestroyKey, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptDestroyKey")]
+		public static int BCryptDestroyKey(global::System.IntPtr hKey)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDestroyKey(hKey);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDuplicateHash, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptDuplicateHash")]
+		public static int BCryptDuplicateHash(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal hHash, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal phNewHash, 
+					global::System.IntPtr pbHashObject, 
+					uint cbHashObject, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_phNewHash;
+			int unsafe___value;
+			// Marshalling
+			hHash.DangerousAddRef(ref addRefed);
+			phNewHash = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_phNewHash = phNewHash.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDuplicateHash(
+								hHash.DangerousGetHandle(), 
+								&(unsafe_phNewHash), 
+								pbHashObject, 
+								cbHashObject, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phNewHash, 
+								unsafe_phNewHash
+							);
+			if (addRefed)
+				hHash.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptEncrypt, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Microsoft_AspNetCore_Cryptography_Cng_BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal__BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptEncrypt")]
+		public static int BCryptEncrypt(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal hKey, 
+					byte* pbInput, 
+					uint cbInput, 
+					void* pPaddingInfo, 
+					byte* pbIV, 
+					uint cbIV, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					out uint pcbResult, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			uint unsafe_pcbResult;
+			int unsafe___value;
+			// Marshalling
+			hKey.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptEncrypt(
+								hKey.DangerousGetHandle(), 
+								((byte*)pbInput), 
+								cbInput, 
+								((void*)pPaddingInfo), 
+								((byte*)pbIV), 
+								cbIV, 
+								((byte*)pbOutput), 
+								cbOutput, 
+								&(unsafe_pcbResult), 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbResult = unsafe_pcbResult;
+			if (addRefed)
+				hKey.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptFinishHash, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptFinishHash")]
+		public static int BCryptFinishHash(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal hHash, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			hHash.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptFinishHash(
+								hHash.DangerousGetHandle(), 
+								((byte*)pbOutput), 
+								cbOutput, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			if (addRefed)
+				hHash.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptGenerateSymmetricKey, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptGenerateSymmetricKey")]
+		public static int BCryptGenerateSymmetricKey(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal hAlgorithm, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal phKey, 
+					global::System.IntPtr pbKeyObject, 
+					uint cbKeyObject, 
+					byte* pbSecret, 
+					uint cbSecret, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_phKey;
+			int unsafe___value;
+			// Marshalling
+			hAlgorithm.DangerousAddRef(ref addRefed);
+			phKey = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_phKey = phKey.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptGenerateSymmetricKey(
+								hAlgorithm.DangerousGetHandle(), 
+								&(unsafe_phKey), 
+								pbKeyObject, 
+								cbKeyObject, 
+								((byte*)pbSecret), 
+								cbSecret, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phKey, 
+								unsafe_phKey
+							);
+			if (addRefed)
+				hAlgorithm.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptGenRandom, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Microsoft_AspNetCore_Cryptography_Cng_BCryptGenRandomFlags__Microsoft_AspNetCore_Cryptography_Internal__BCryptGenRandomFlags__Microsoft_AspNetCore_Cryptography_Internal, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptGenRandom")]
+		public static int BCryptGenRandom(
+					global::System.IntPtr hAlgorithm, 
+					byte* pbBuffer, 
+					uint cbBuffer, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptGenRandomFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptGenRandom(
+								hAlgorithm, 
+								((byte*)pbBuffer), 
+								cbBuffer, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptGetProperty, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptGetProperty")]
+		public static int BCryptGetProperty(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHandle__Microsoft_AspNetCore_Cryptography_Internal hObject, 
+					string pszProperty, 
+					void* pbOutput, 
+					uint cbOutput, 
+					out uint pcbResult, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			uint unsafe_pcbResult;
+			int unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptGetProperty(
+									hObject.DangerousGetHandle(), 
+									unsafe_pszProperty, 
+									((void*)pbOutput), 
+									cbOutput, 
+									&(unsafe_pcbResult), 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				pcbResult = unsafe_pcbResult;
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptHashData, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptHashData")]
+		public static int BCryptHashData(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHashHandle__Microsoft_AspNetCore_Cryptography_Internal hHash, 
+					byte* pbInput, 
+					uint cbInput, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			hHash.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptHashData(
+								hHash.DangerousGetHandle(), 
+								((byte*)pbInput), 
+								cbInput, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			if (addRefed)
+				hHash.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptKeyDerivation, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Microsoft_AspNetCore_Cryptography_Cng_BCryptBufferDesc__Microsoft_AspNetCore_Cryptography_Internal___ptrMicrosoft_AspNetCore_Cryptography_Cng__BCryptBufferDesc__Microsoft_AspNetCore_Cryptography_Internal *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptKeyDerivation")]
+		public static int BCryptKeyDerivation(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptKeyHandle__Microsoft_AspNetCore_Cryptography_Internal hKey, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptBufferDesc__Microsoft_AspNetCore_Cryptography_Internal* pParameterList, 
+					byte* pbDerivedKey, 
+					uint cbDerivedKey, 
+					out uint pcbResult, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			uint unsafe_pcbResult;
+			int unsafe___value;
+			// Marshalling
+			hKey.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptKeyDerivation(
+								hKey.DangerousGetHandle(), 
+								((global::Microsoft.AspNetCore.Cryptography.Cng.BCryptBufferDesc__Microsoft_AspNetCore_Cryptography_Internal*)pParameterList), 
+								((byte*)pbDerivedKey), 
+								cbDerivedKey, 
+								&(unsafe_pcbResult), 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbResult = unsafe_pcbResult;
+			if (addRefed)
+				hKey.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptOpenAlgorithmProvider, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptOpenAlgorithmProvider")]
+		public static int BCryptOpenAlgorithmProvider(
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal phAlgorithm, 
+					string pszAlgId, 
+					string pszImplementation, 
+					uint dwFlags)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phAlgorithm;
+			ushort* unsafe_pszAlgId = default(ushort*);
+			ushort* unsafe_pszImplementation = default(ushort*);
+			int unsafe___value;
+			// Marshalling
+			phAlgorithm = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptAlgorithmHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_phAlgorithm = phAlgorithm.DangerousGetHandle();
+			fixed (char* pinned_pszAlgId = pszAlgId)
+			{
+				unsafe_pszAlgId = (ushort*)pinned_pszAlgId;
+				fixed (char* pinned_pszImplementation = pszImplementation)
+				{
+					unsafe_pszImplementation = (ushort*)pinned_pszImplementation;
+					// Call to native method
+					unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptOpenAlgorithmProvider(
+										&(unsafe_phAlgorithm), 
+										unsafe_pszAlgId, 
+										unsafe_pszImplementation, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+			}
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phAlgorithm, 
+								unsafe_phAlgorithm
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptSetProperty, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_BCryptHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "BCryptSetProperty")]
+		public static int BCryptSetProperty(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.BCryptHandle__Microsoft_AspNetCore_Cryptography_Internal hObject, 
+					string pszProperty, 
+					void* pbInput, 
+					uint cbInput, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			int unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptSetProperty(
+									hObject.DangerousGetHandle(), 
+									unsafe_pszProperty, 
+									((void*)pbInput), 
+									cbInput, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptFinishHash__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptHashHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [out] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptFinishHash")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptFinishHash__0(
+					global::Microsoft.Win32.SafeHandles.SafeBCryptHashHandle__System_Security_Cryptography_Algorithms hHash, 
+					byte[] pbOutput, 
+					int cbOutput, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			byte* unsafe_pbOutput;
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hHash.DangerousAddRef(ref addRefed);
+			fixed (byte* pinned_pbOutput = global::__Interop.McgHelpers.GetArrayForCompat(pbOutput))
+			{
+				unsafe_pbOutput = (byte*)pinned_pbOutput;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptFinishHash__0(
+									hHash.DangerousGetHandle(), 
+									unsafe_pbOutput, 
+									cbOutput, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+			if (addRefed)
+				hHash.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptCreateHash__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptAlgorithmHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptHashHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [out] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_BCryptCreateHashFlags__System_Security_Cryptography_Algorithms__Interop_BCrypt_BCryptCreateHashFlags__System_Security_Cryptography_Algorithms, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptCreateHash")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptCreateHash__0(
+					global::Microsoft.Win32.SafeHandles.SafeBCryptAlgorithmHandle__System_Security_Cryptography_Algorithms hAlgorithm, 
+					out global::Microsoft.Win32.SafeHandles.SafeBCryptHashHandle__System_Security_Cryptography_Algorithms phHash, 
+					global::System.IntPtr pbHashObject, 
+					int cbHashObject, 
+					byte[] pbSecret, 
+					int cbSecret, 
+					global::Interop_BCrypt_BCryptCreateHashFlags__System_Security_Cryptography_Algorithms dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_phHash;
+			byte* unsafe_pbSecret;
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hAlgorithm.DangerousAddRef(ref addRefed);
+			phHash = new global::Microsoft.Win32.SafeHandles.SafeBCryptHashHandle__System_Security_Cryptography_Algorithms();
+			unsafe_phHash = phHash.DangerousGetHandle();
+			fixed (byte* pinned_pbSecret = global::__Interop.McgHelpers.GetArrayForCompat(pbSecret))
+			{
+				unsafe_pbSecret = (byte*)pinned_pbSecret;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptCreateHash__0(
+									hAlgorithm.DangerousGetHandle(), 
+									&(unsafe_phHash), 
+									pbHashObject, 
+									cbHashObject, 
+									unsafe_pbSecret, 
+									cbSecret, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phHash, 
+								unsafe_phHash
+							);
+			if (addRefed)
+				hAlgorithm.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptGetProperty__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptGetProperty")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptGetProperty__0(
+					global::Microsoft.Win32.SafeHandles.SafeBCryptHandle__System_Security_Cryptography_Algorithms hObject, 
+					string pszProperty, 
+					void* pbOutput, 
+					int cbOutput, 
+					out int pcbResult, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			int unsafe_pcbResult;
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptGetProperty__0(
+									hObject.DangerousGetHandle(), 
+									unsafe_pszProperty, 
+									((void*)pbOutput), 
+									cbOutput, 
+									&(unsafe_pcbResult), 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				pcbResult = unsafe_pcbResult;
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptHashData__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptHashHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptHashData")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptHashData__0(
+					global::Microsoft.Win32.SafeHandles.SafeBCryptHashHandle__System_Security_Cryptography_Algorithms hHash, 
+					byte* pbInput, 
+					int cbInput, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hHash.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptHashData__0(
+								hHash.DangerousGetHandle(), 
+								((byte*)pbInput), 
+								cbInput, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			if (addRefed)
+				hHash.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptGenRandom__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptGenRandom")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptGenRandom__0(
+					global::System.IntPtr hAlgorithm, 
+					byte* pbBuffer, 
+					int cbBuffer, 
+					int dwFlags)
+		{
+			// Setup
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptGenRandom__0(
+								hAlgorithm, 
+								((byte*)pbBuffer), 
+								cbBuffer, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptOpenAlgorithmProvider__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeBCryptAlgorithmHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_BCryptOpenAlgorithmProviderFlags__System_Security_Cryptography_Algorithms__Interop_BCrypt_BCryptOpenAlgorithmProviderFlags__System_Security_Cryptography_Algorithms, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptOpenAlgorithmProvider")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptOpenAlgorithmProvider__0(
+					out global::Microsoft.Win32.SafeHandles.SafeBCryptAlgorithmHandle__System_Security_Cryptography_Algorithms phAlgorithm, 
+					string pszAlgId, 
+					string pszImplementation, 
+					global::Interop_BCrypt_BCryptOpenAlgorithmProviderFlags__System_Security_Cryptography_Algorithms dwFlags)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phAlgorithm;
+			ushort* unsafe_pszAlgId = default(ushort*);
+			ushort* unsafe_pszImplementation = default(ushort*);
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			phAlgorithm = new global::Microsoft.Win32.SafeHandles.SafeBCryptAlgorithmHandle__System_Security_Cryptography_Algorithms();
+			unsafe_phAlgorithm = phAlgorithm.DangerousGetHandle();
+			fixed (char* pinned_pszAlgId = pszAlgId)
+			{
+				unsafe_pszAlgId = (ushort*)pinned_pszAlgId;
+				fixed (char* pinned_pszImplementation = pszImplementation)
+				{
+					unsafe_pszImplementation = (ushort*)pinned_pszImplementation;
+					// Call to native method
+					unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptOpenAlgorithmProvider__0(
+										&(unsafe_phAlgorithm), 
+										unsafe_pszAlgId, 
+										unsafe_pszImplementation, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+			}
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phAlgorithm, 
+								unsafe_phAlgorithm
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDestroyHash__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptDestroyHash")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptDestroyHash__0(global::System.IntPtr hHash)
+		{
+			// Setup
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDestroyHash__0(hHash);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptImportKey, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Internal_NativeCrypto_Cng_NTSTATUS__System_Security_Cryptography_Algorithms__Cng_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeAlgorithmHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeKeyHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "BCryptImportKey")]
+		public static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptImportKey(
+					global::Internal.NativeCrypto.SafeAlgorithmHandle__System_Security_Cryptography_Algorithms hAlgorithm, 
+					global::System.IntPtr hImportKey, 
+					string pszBlobType, 
+					out global::Internal.NativeCrypto.SafeKeyHandle__System_Security_Cryptography_Algorithms hKey, 
+					global::System.IntPtr pbKeyObject, 
+					int cbKeyObject, 
+					byte[] pbInput, 
+					int cbInput, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszBlobType = default(ushort*);
+			global::System.IntPtr unsafe_hKey;
+			byte* unsafe_pbInput;
+			global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hAlgorithm.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszBlobType = pszBlobType)
+			{
+				unsafe_pszBlobType = (ushort*)pinned_pszBlobType;
+				hKey = new global::Internal.NativeCrypto.SafeKeyHandle__System_Security_Cryptography_Algorithms();
+				unsafe_hKey = hKey.DangerousGetHandle();
+				fixed (byte* pinned_pbInput = global::__Interop.McgHelpers.GetArrayForCompat(pbInput))
+				{
+					unsafe_pbInput = (byte*)pinned_pbInput;
+					// Call to native method
+					unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptImportKey(
+										hAlgorithm.DangerousGetHandle(), 
+										hImportKey, 
+										unsafe_pszBlobType, 
+										&(unsafe_hKey), 
+										pbKeyObject, 
+										cbKeyObject, 
+										unsafe_pbInput, 
+										cbInput, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									hKey, 
+									unsafe_hKey
+								);
+			}
+			if (addRefed)
+				hAlgorithm.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptCloseAlgorithmProvider__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms__Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+BCrypt", "BCryptCloseAlgorithmProvider")]
+		public static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptCloseAlgorithmProvider__0(
+					global::System.IntPtr hAlgorithm, 
+					int dwFlags)
+		{
+			// Setup
+			global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptCloseAlgorithmProvider__0(
+								hAlgorithm, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptCloseAlgorithmProvider__1, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.SafeAlgorithmHandle", "BCryptCloseAlgorithmProvider")]
+		public static uint BCryptCloseAlgorithmProvider__1(
+					global::System.IntPtr hAlgorithm, 
+					int dwFlags)
+		{
+			// Setup
+			uint unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptCloseAlgorithmProvider__1(
+								hAlgorithm, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDestroyKey__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.SafeKeyHandle", "BCryptDestroyKey")]
+		public static uint BCryptDestroyKey__0(global::System.IntPtr hKey)
+		{
+			// Setup
+			uint unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDestroyKey__0(hKey);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptOpenAlgorithmProvider__1, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Internal_NativeCrypto_Cng_NTSTATUS__System_Security_Cryptography_Algorithms__Cng_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeAlgorithmHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "BCryptOpenAlgorithmProvider")]
+		public static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptOpenAlgorithmProvider__1(
+					out global::Internal.NativeCrypto.SafeAlgorithmHandle__System_Security_Cryptography_Algorithms phAlgorithm, 
+					string pszAlgId, 
+					string pszImplementation, 
+					int dwFlags)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phAlgorithm;
+			ushort* unsafe_pszAlgId = default(ushort*);
+			ushort* unsafe_pszImplementation = default(ushort*);
+			global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			phAlgorithm = new global::Internal.NativeCrypto.SafeAlgorithmHandle__System_Security_Cryptography_Algorithms();
+			unsafe_phAlgorithm = phAlgorithm.DangerousGetHandle();
+			fixed (char* pinned_pszAlgId = pszAlgId)
+			{
+				unsafe_pszAlgId = (ushort*)pinned_pszAlgId;
+				fixed (char* pinned_pszImplementation = pszImplementation)
+				{
+					unsafe_pszImplementation = (ushort*)pinned_pszImplementation;
+					// Call to native method
+					unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptOpenAlgorithmProvider__1(
+										&(unsafe_phAlgorithm), 
+										unsafe_pszAlgId, 
+										unsafe_pszImplementation, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+			}
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phAlgorithm, 
+								unsafe_phAlgorithm
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptSetProperty__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Internal_NativeCrypto_Cng_NTSTATUS__System_Security_Cryptography_Algorithms__Cng_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeAlgorithmHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "BCryptSetProperty")]
+		public static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptSetProperty__0(
+					global::Internal.NativeCrypto.SafeAlgorithmHandle__System_Security_Cryptography_Algorithms hObject, 
+					string pszProperty, 
+					string pbInput, 
+					int cbInput, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			ushort* unsafe_pbInput = default(ushort*);
+			global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				fixed (char* pinned_pbInput = pbInput)
+				{
+					unsafe_pbInput = (ushort*)pinned_pbInput;
+					// Call to native method
+					unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptSetProperty__0(
+										hObject.DangerousGetHandle(), 
+										unsafe_pszProperty, 
+										unsafe_pbInput, 
+										cbInput, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptEncrypt__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Internal_NativeCrypto_Cng_NTSTATUS__System_Security_Cryptography_Algorithms__Cng_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeKeyHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [out] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "BCryptEncrypt")]
+		public static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptEncrypt__0(
+					global::Internal.NativeCrypto.SafeKeyHandle__System_Security_Cryptography_Algorithms hKey, 
+					byte* pbInput, 
+					int cbInput, 
+					global::System.IntPtr paddingInfo, 
+					byte[] pbIV, 
+					int cbIV, 
+					byte* pbOutput, 
+					int cbOutput, 
+					out int cbResult, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			byte* unsafe_pbIV;
+			int unsafe_cbResult;
+			global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hKey.DangerousAddRef(ref addRefed);
+			fixed (byte* pinned_pbIV = global::__Interop.McgHelpers.GetArrayForCompat(pbIV))
+			{
+				unsafe_pbIV = (byte*)pinned_pbIV;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptEncrypt__0(
+									hKey.DangerousGetHandle(), 
+									((byte*)pbInput), 
+									cbInput, 
+									paddingInfo, 
+									unsafe_pbIV, 
+									cbIV, 
+									((byte*)pbOutput), 
+									cbOutput, 
+									&(unsafe_cbResult), 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				cbResult = unsafe_cbResult;
+			}
+			if (addRefed)
+				hKey.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, BCryptDecrypt__0, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Internal_NativeCrypto_Cng_NTSTATUS__System_Security_Cryptography_Algorithms__Cng_NTSTATUS__System_Security_Cryptography_Algorithms, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Internal_NativeCrypto_SafeKeyHandle__System_Security_Cryptography_Algorithms____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [out] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "BCryptDecrypt")]
+		public static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptDecrypt__0(
+					global::Internal.NativeCrypto.SafeKeyHandle__System_Security_Cryptography_Algorithms hKey, 
+					byte* pbInput, 
+					int cbInput, 
+					global::System.IntPtr paddingInfo, 
+					byte[] pbIV, 
+					int cbIV, 
+					byte* pbOutput, 
+					int cbOutput, 
+					out int cbResult, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			byte* unsafe_pbIV;
+			int unsafe_cbResult;
+			global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms unsafe___value;
+			// Marshalling
+			hKey.DangerousAddRef(ref addRefed);
+			fixed (byte* pinned_pbIV = global::__Interop.McgHelpers.GetArrayForCompat(pbIV))
+			{
+				unsafe_pbIV = (byte*)pinned_pbIV;
+				// Call to native method
+				unsafe___value = global::__Interop.bcrypt_dll_PInvokes.BCryptDecrypt__0(
+									hKey.DangerousGetHandle(), 
+									((byte*)pbInput), 
+									cbInput, 
+									paddingInfo, 
+									unsafe_pbIV, 
+									cbIV, 
+									((byte*)pbOutput), 
+									cbOutput, 
+									&(unsafe_cbResult), 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				cbResult = unsafe_cbResult;
+			}
+			if (addRefed)
+				hKey.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'crypt32.dll'
+	/// </summary>
+	public unsafe static partial class crypt32_dll
+	{
+		// Signature, CryptProtectData, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal___ptrMicrosoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal___ptrMicrosoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal__Microsoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "CryptProtectData")]
+		public static bool CryptProtectData(
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataIn, 
+					global::System.IntPtr szDataDescr, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pOptionalEntropy, 
+					global::System.IntPtr pvReserved, 
+					global::System.IntPtr pPromptStruct, 
+					uint dwFlags, 
+					out global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal pDataOut)
+		{
+			// Setup
+			global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal unsafe_pDataOut;
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptProtectData(
+								((global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal*)pDataIn), 
+								szDataDescr, 
+								((global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal*)pOptionalEntropy), 
+								pvReserved, 
+								pPromptStruct, 
+								dwFlags, 
+								&(unsafe_pDataOut)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			pDataOut = unsafe_pDataOut;
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CryptProtectMemory, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "CryptProtectMemory")]
+		public static bool CryptProtectMemory(
+					global::System.Runtime.InteropServices.SafeHandle pData, 
+					uint cbData, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			pData.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptProtectMemory(
+								pData.DangerousGetHandle(), 
+								cbData, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				pData.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CryptUnprotectData, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal___ptrMicrosoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal___ptrMicrosoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Microsoft_AspNetCore_Cryptography_DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal__Microsoft_AspNetCore_Cryptography__DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "CryptUnprotectData")]
+		public static bool CryptUnprotectData(
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataIn, 
+					global::System.IntPtr ppszDataDescr, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pOptionalEntropy, 
+					global::System.IntPtr pvReserved, 
+					global::System.IntPtr pPromptStruct, 
+					uint dwFlags, 
+					out global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal pDataOut)
+		{
+			// Setup
+			global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal unsafe_pDataOut;
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptUnprotectData(
+								((global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal*)pDataIn), 
+								ppszDataDescr, 
+								((global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal*)pOptionalEntropy), 
+								pvReserved, 
+								pPromptStruct, 
+								dwFlags, 
+								&(unsafe_pDataOut)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			pDataOut = unsafe_pDataOut;
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CryptUnprotectMemory, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "CryptUnprotectMemory")]
+		public static bool CryptUnprotectMemory(
+					byte* pData, 
+					uint cbData, 
+					uint dwFlags)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptUnprotectMemory(
+								((byte*)pData), 
+								cbData, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CryptUnprotectMemory__0, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "CryptUnprotectMemory")]
+		public static bool CryptUnprotectMemory__0(
+					global::System.Runtime.InteropServices.SafeHandle pData, 
+					uint cbData, 
+					uint dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			pData.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptUnprotectMemory__0(
+								pData.DangerousGetHandle(), 
+								cbData, 
+								dwFlags
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				pData.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CryptFindOIDInfo, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_Encoding__Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_Encoding, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Cryptography_OidGroup__System_Security_Cryptography_Encoding__OidGroup__System_Security_Cryptography_Encoding, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+Crypt32", "CryptFindOIDInfo")]
+		public static global::System.IntPtr CryptFindOIDInfo(
+					global::Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_Encoding dwKeyType, 
+					global::System.IntPtr pvKey, 
+					global::System.Security.Cryptography.OidGroup__System_Security_Cryptography_Encoding group)
+		{
+			// Setup
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptFindOIDInfo(
+								dwKeyType, 
+								pvKey, 
+								group
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, CryptFormatObject, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.AnsiStringMarshaller] string__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.NativeCrypto.Cng+Interop", "CryptFormatObject")]
+		public static bool CryptFormatObject(
+					int dwCertEncodingType, 
+					int dwFormatType, 
+					int dwFormatStrType, 
+					global::System.IntPtr pFormatStruct, 
+					string lpszStructType, 
+					byte[] pbEncoded, 
+					int cbEncoded, 
+					global::System.Text.StringBuilder pbFormat, 
+					ref int pcbFormat)
+		{
+			// Setup
+			byte* unsafe_lpszStructType = default(byte*);
+			byte* unsafe_pbEncoded;
+			ushort* unsafe_pbFormat = default(ushort*);
+			int unsafe_pcbFormat;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				unsafe_lpszStructType = global::System.Runtime.InteropServices.McgMarshal.StringToAnsiString(lpszStructType, false, false);
+				fixed (byte* pinned_pbEncoded = global::__Interop.McgHelpers.GetArrayForCompat(pbEncoded))
+				{
+					unsafe_pbEncoded = (byte*)pinned_pbEncoded;
+					if (pbFormat == null)
+						unsafe_pbFormat = null;
+					else
+					{
+						unsafe_pbFormat = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(pbFormat.Capacity * 2 
+											+ 2)));
+						if (unsafe_pbFormat == null)
+							throw new global::System.OutOfMemoryException();
+					}
+					unsafe_pcbFormat = pcbFormat;
+					// Call to native method
+					unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptFormatObject(
+										dwCertEncodingType, 
+										dwFormatType, 
+										dwFormatStrType, 
+										pFormatStruct, 
+										unsafe_lpszStructType, 
+										unsafe_pbEncoded, 
+										cbEncoded, 
+										unsafe_pbFormat, 
+										&(unsafe_pcbFormat)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+					pcbFormat = unsafe_pcbFormat;
+					if (pbFormat != null)
+						global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+											unsafe_pbFormat, 
+											pbFormat
+										);
+				}
+				// Return
+				return unsafe___value != 0;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpszStructType);
+				if (unsafe_pbFormat != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_pbFormat);
+			}
+		}
+
+		// Signature, CryptFindOIDInfo__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_X509Certificates__Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_X509Certificates, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Cryptography_OidGroup__System_Security_Cryptography_Encoding__OidGroup__System_Security_Cryptography_Encoding, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+			"", "Interop+Crypt32", "CryptFindOIDInfo")]
+		public static global::System.IntPtr CryptFindOIDInfo__0(
+					global::Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_X509Certificates dwKeyType, 
+					global::System.IntPtr pvKey, 
+					global::System.Security.Cryptography.OidGroup__System_Security_Cryptography_Encoding group)
+		{
+			// Setup
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptFindOIDInfo__0(
+								dwKeyType, 
+								pvKey, 
+								group
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, CryptDecodeObject, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Internal_Cryptography_Pal_Native_CertEncodingType__System_Security_Cryptography_X509Certificates__CertEncodingType__System_Security_Cryptography_X509Certificates, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Internal_Cryptography_Pal_Native_CryptDecodeObjectFlags__System_Security_Cryptography_X509Certificates__CryptDecodeObjectFlags__System_Security_Cryptography_X509Certificates, [fwd] [out] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+			"", "Interop+crypt32", "CryptDecodeObject")]
+		public static bool CryptDecodeObject(
+					global::Internal.Cryptography.Pal.Native.CertEncodingType__System_Security_Cryptography_X509Certificates dwCertEncodingType, 
+					global::System.IntPtr lpszStructType, 
+					byte[] pbEncoded, 
+					int cbEncoded, 
+					global::Internal.Cryptography.Pal.Native.CryptDecodeObjectFlags__System_Security_Cryptography_X509Certificates dwFlags, 
+					byte[] pvStructInfo, 
+					ref int pcbStructInfo)
+		{
+			// Setup
+			byte* unsafe_pbEncoded;
+			byte* unsafe_pvStructInfo;
+			int unsafe_pcbStructInfo;
+			int unsafe___value;
+			// Marshalling
+			fixed (byte* pinned_pbEncoded = global::__Interop.McgHelpers.GetArrayForCompat(pbEncoded))
+			{
+				unsafe_pbEncoded = (byte*)pinned_pbEncoded;
+				fixed (byte* pinned_pvStructInfo = global::__Interop.McgHelpers.GetArrayForCompat(pvStructInfo))
+				{
+					unsafe_pvStructInfo = (byte*)pinned_pvStructInfo;
+					unsafe_pcbStructInfo = pcbStructInfo;
+					// Call to native method
+					unsafe___value = global::__Interop.crypt32_dll_PInvokes.CryptDecodeObject(
+										dwCertEncodingType, 
+										lpszStructType, 
+										unsafe_pbEncoded, 
+										cbEncoded, 
+										dwFlags, 
+										unsafe_pvStructInfo, 
+										&(unsafe_pcbStructInfo)
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+					pcbStructInfo = unsafe_pcbStructInfo;
+				}
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CertFreeCertificateContext, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+			"", "Interop+crypt32", "CertFreeCertificateContext")]
+		public static bool CertFreeCertificateContext(global::System.IntPtr pCertContext)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.crypt32_dll_PInvokes.CertFreeCertificateContext(pCertContext);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value != 0;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'ncrypt.dll'
+	/// </summary>
+	public unsafe static partial class ncrypt_dll
+	{
+		// Signature, NCryptCloseProtectionDescriptor, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptCloseProtectionDescriptor")]
+		public static int NCryptCloseProtectionDescriptor(global::System.IntPtr hDescriptor)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptCloseProtectionDescriptor(hDescriptor);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptCreateProtectionDescriptor, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptCreateProtectionDescriptor")]
+		public static int NCryptCreateProtectionDescriptor(
+					string pwszDescriptorString, 
+					uint dwFlags, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal phDescriptor)
+		{
+			// Setup
+			ushort* unsafe_pwszDescriptorString = default(ushort*);
+			global::System.IntPtr unsafe_phDescriptor;
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_pwszDescriptorString = pwszDescriptorString)
+			{
+				unsafe_pwszDescriptorString = (ushort*)pinned_pwszDescriptorString;
+				phDescriptor = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal();
+				unsafe_phDescriptor = phDescriptor.DangerousGetHandle();
+				// Call to native method
+				unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptCreateProtectionDescriptor(
+									unsafe_pwszDescriptorString, 
+									dwFlags, 
+									&(unsafe_phDescriptor)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									phDescriptor, 
+									unsafe_phDescriptor
+								);
+			}
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptGetProtectionDescriptorInfo, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptGetProtectionDescriptorInfo")]
+		public static int NCryptGetProtectionDescriptorInfo(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal hDescriptor, 
+					global::System.IntPtr pMemPara, 
+					uint dwInfoType, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal ppvInfo)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_ppvInfo;
+			int unsafe___value;
+			// Marshalling
+			hDescriptor.DangerousAddRef(ref addRefed);
+			ppvInfo = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_ppvInfo = ppvInfo.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptGetProtectionDescriptorInfo(
+								hDescriptor.DangerousGetHandle(), 
+								pMemPara, 
+								dwInfoType, 
+								&(unsafe_ppvInfo)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								ppvInfo, 
+								unsafe_ppvInfo
+							);
+			if (addRefed)
+				hDescriptor.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptProtectSecret, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptProtectSecret")]
+		public static int NCryptProtectSecret(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal hDescriptor, 
+					uint dwFlags, 
+					byte* pbData, 
+					uint cbData, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal ppbProtectedBlob, 
+					out uint pcbProtectedBlob)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_ppbProtectedBlob;
+			uint unsafe_pcbProtectedBlob;
+			int unsafe___value;
+			// Marshalling
+			hDescriptor.DangerousAddRef(ref addRefed);
+			ppbProtectedBlob = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_ppbProtectedBlob = ppbProtectedBlob.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptProtectSecret(
+								hDescriptor.DangerousGetHandle(), 
+								dwFlags, 
+								((byte*)pbData), 
+								cbData, 
+								pMemPara, 
+								hWnd, 
+								&(unsafe_ppbProtectedBlob), 
+								&(unsafe_pcbProtectedBlob)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbProtectedBlob = unsafe_pcbProtectedBlob;
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								ppbProtectedBlob, 
+								unsafe_ppbProtectedBlob
+							);
+			if (addRefed)
+				hDescriptor.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptUnprotectSecret, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptUnprotectSecret")]
+		public static int NCryptUnprotectSecret(
+					global::System.IntPtr phDescriptor, 
+					uint dwFlags, 
+					byte* pbProtectedBlob, 
+					uint cbProtectedBlob, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal ppbData, 
+					out uint pcbData)
+		{
+			// Setup
+			global::System.IntPtr unsafe_ppbData;
+			uint unsafe_pcbData;
+			int unsafe___value;
+			// Marshalling
+			ppbData = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_ppbData = ppbData.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptUnprotectSecret(
+								phDescriptor, 
+								dwFlags, 
+								((byte*)pbProtectedBlob), 
+								cbProtectedBlob, 
+								pMemPara, 
+								hWnd, 
+								&(unsafe_ppbData), 
+								&(unsafe_pcbData)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbData = unsafe_pcbData;
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								ppbData, 
+								unsafe_ppbData
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptUnprotectSecret__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.UnsafeNativeMethods", "NCryptUnprotectSecret")]
+		public static int NCryptUnprotectSecret__0(
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal phDescriptor, 
+					uint dwFlags, 
+					byte* pbProtectedBlob, 
+					uint cbProtectedBlob, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal ppbData, 
+					out uint pcbData)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phDescriptor;
+			global::System.IntPtr unsafe_ppbData;
+			uint unsafe_pcbData;
+			int unsafe___value;
+			// Marshalling
+			phDescriptor = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.NCryptDescriptorHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_phDescriptor = phDescriptor.DangerousGetHandle();
+			ppbData = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_ppbData = ppbData.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptUnprotectSecret__0(
+								&(unsafe_phDescriptor), 
+								dwFlags, 
+								((byte*)pbProtectedBlob), 
+								cbProtectedBlob, 
+								pMemPara, 
+								hWnd, 
+								&(unsafe_ppbData), 
+								&(unsafe_pcbData)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			pcbData = unsafe_pcbData;
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								ppbData, 
+								unsafe_ppbData
+							);
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phDescriptor, 
+								unsafe_phDescriptor
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptImportKey, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng__Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeNCryptProviderHandle__System_Security_Cryptography_Cng____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeNCryptKeyHandle__System_Security_Cryptography_Cng____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NCrypt", "NCryptImportKey")]
+		public static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptImportKey(
+					global::Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle__System_Security_Cryptography_Cng hProvider, 
+					global::System.IntPtr hImportKey, 
+					string pszBlobType, 
+					global::System.IntPtr pParameterList, 
+					out global::Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle__System_Security_Cryptography_Cng phKey, 
+					byte[] pbData, 
+					int cbData, 
+					int dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszBlobType = default(ushort*);
+			global::System.IntPtr unsafe_phKey;
+			byte* unsafe_pbData;
+			global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng unsafe___value;
+			// Marshalling
+			hProvider.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszBlobType = pszBlobType)
+			{
+				unsafe_pszBlobType = (ushort*)pinned_pszBlobType;
+				phKey = new global::Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle__System_Security_Cryptography_Cng();
+				unsafe_phKey = phKey.DangerousGetHandle();
+				fixed (byte* pinned_pbData = global::__Interop.McgHelpers.GetArrayForCompat(pbData))
+				{
+					unsafe_pbData = (byte*)pinned_pbData;
+					// Call to native method
+					unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptImportKey(
+										hProvider.DangerousGetHandle(), 
+										hImportKey, 
+										unsafe_pszBlobType, 
+										pParameterList, 
+										&(unsafe_phKey), 
+										unsafe_pbData, 
+										cbData, 
+										dwFlags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				}
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									phKey, 
+									unsafe_phKey
+								);
+			}
+			if (addRefed)
+				hProvider.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptGetProperty, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng__Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeNCryptHandle__System_Security_Cryptography_Cng____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [out] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Cryptography_CngPropertyOptions__System_Security_Cryptography_Cng__CngPropertyOptions__System_Security_Cryptography_Cng, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NCrypt", "NCryptGetProperty")]
+		public static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptGetProperty(
+					global::Microsoft.Win32.SafeHandles.SafeNCryptHandle__System_Security_Cryptography_Cng hObject, 
+					string pszProperty, 
+					void* pbOutput, 
+					int cbOutput, 
+					out int pcbResult, 
+					global::System.Security.Cryptography.CngPropertyOptions__System_Security_Cryptography_Cng dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			int unsafe_pcbResult;
+			global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				// Call to native method
+				unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptGetProperty(
+									hObject.DangerousGetHandle(), 
+									unsafe_pszProperty, 
+									((void*)pbOutput), 
+									cbOutput, 
+									&(unsafe_pcbResult), 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				pcbResult = unsafe_pcbResult;
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptOpenStorageProvider, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng__Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeNCryptProviderHandle__System_Security_Cryptography_Cng____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NCrypt", "NCryptOpenStorageProvider")]
+		public static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptOpenStorageProvider(
+					out global::Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle__System_Security_Cryptography_Cng phProvider, 
+					string pszProviderName, 
+					int dwFlags)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phProvider;
+			ushort* unsafe_pszProviderName = default(ushort*);
+			global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng unsafe___value;
+			// Marshalling
+			phProvider = new global::Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle__System_Security_Cryptography_Cng();
+			unsafe_phProvider = phProvider.DangerousGetHandle();
+			fixed (char* pinned_pszProviderName = pszProviderName)
+			{
+				unsafe_pszProviderName = (ushort*)pinned_pszProviderName;
+				// Call to native method
+				unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptOpenStorageProvider(
+									&(unsafe_phProvider), 
+									unsafe_pszProviderName, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phProvider, 
+								unsafe_phProvider
+							);
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptSetProperty, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng__Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeNCryptHandle__System_Security_Cryptography_Cng____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] void___ptrvoid *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Cryptography_CngPropertyOptions__System_Security_Cryptography_Cng__CngPropertyOptions__System_Security_Cryptography_Cng, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NCrypt", "NCryptSetProperty")]
+		public static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptSetProperty(
+					global::Microsoft.Win32.SafeHandles.SafeNCryptHandle__System_Security_Cryptography_Cng hObject, 
+					string pszProperty, 
+					void* pbInput, 
+					int cbInput, 
+					global::System.Security.Cryptography.CngPropertyOptions__System_Security_Cryptography_Cng dwFlags)
+		{
+			// Setup
+			bool addRefed = false;
+			ushort* unsafe_pszProperty = default(ushort*);
+			global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng unsafe___value;
+			// Marshalling
+			hObject.DangerousAddRef(ref addRefed);
+			fixed (char* pinned_pszProperty = pszProperty)
+			{
+				unsafe_pszProperty = (ushort*)pinned_pszProperty;
+				// Call to native method
+				unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptSetProperty(
+									hObject.DangerousGetHandle(), 
+									unsafe_pszProperty, 
+									((void*)pbInput), 
+									cbInput, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			}
+			if (addRefed)
+				hObject.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, NCryptFreeObject, [fwd] [return] [Mcg.CodeGen.EnumMarshaller] Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng__Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NCrypt", "NCryptFreeObject")]
+		public static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptFreeObject(global::System.IntPtr hObject)
+		{
+			// Setup
+			global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.ncrypt_dll_PInvokes.NCryptFreeObject(hObject);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-localization-l1-2-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_localization_l1_2_0_dll
+	{
+		// Signature, FormatMessage, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle+UnsafeNativeMethods", "FormatMessage")]
+		public static int FormatMessage(
+					uint dwFlags, 
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal lpSource, 
+					uint dwMessageId, 
+					uint dwLanguageId, 
+					out global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal lpBuffer, 
+					uint nSize, 
+					global::System.IntPtr Arguments)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_lpBuffer;
+			int unsafe___value;
+			// Marshalling
+			lpSource.DangerousAddRef(ref addRefed);
+			lpBuffer = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.LocalAllocHandle__Microsoft_AspNetCore_Cryptography_Internal();
+			unsafe_lpBuffer = lpBuffer.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage(
+								dwFlags, 
+								lpSource.DangerousGetHandle(), 
+								dwMessageId, 
+								dwLanguageId, 
+								&(unsafe_lpBuffer), 
+								nSize, 
+								Arguments
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								lpBuffer, 
+								unsafe_lpBuffer
+							);
+			if (addRefed)
+				lpSource.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, IsValidLocaleName, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.WinRTInterop.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "mincore+mincore_PInvokes", "IsValidLocaleName")]
+		public static int IsValidLocaleName(char* lpLocaleName)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.IsValidLocaleName(((ushort*)lpLocaleName));
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, ResolveLocaleName, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.WinRTInterop.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "mincore+mincore_PInvokes", "ResolveLocaleName")]
+		public static int ResolveLocaleName(
+					char* lpNameToResolve, 
+					char* lpLocaleName, 
+					int cchLocaleName)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.ResolveLocaleName(
+								((ushort*)lpNameToResolve), 
+								((ushort*)lpLocaleName), 
+								cchLocaleName
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, IdnToUnicode, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Globalization.Extensions, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "IdnToUnicode")]
+		public static int IdnToUnicode(
+					uint dwFlags, 
+					global::System.IntPtr lpASCIICharStr, 
+					int cchASCIIChar, 
+					global::System.IntPtr lpUnicodeCharStr, 
+					int cchUnicodeChar)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.IdnToUnicode(
+								dwFlags, 
+								lpASCIICharStr, 
+								cchASCIIChar, 
+								lpUnicodeCharStr, 
+								cchUnicodeChar
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, GetCPInfoExW, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages___ptr__Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Text.Encoding.CodePages, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetCPInfoExW")]
+		public static int GetCPInfoExW(
+					uint CodePage, 
+					uint dwFlags, 
+					global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages* lpCPInfoEx)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.GetCPInfoExW(
+								CodePage, 
+								dwFlags, 
+								((global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages*)lpCPInfoEx)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, IdnToAscii, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Globalization.Extensions, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "IdnToAscii")]
+		public static int IdnToAscii(
+					uint dwFlags, 
+					global::System.IntPtr lpUnicodeCharStr, 
+					int cchUnicodeChar, 
+					global::System.IntPtr lpASCIICharStr, 
+					int cchASCIIChar)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.IdnToAscii(
+								dwFlags, 
+								lpUnicodeCharStr, 
+								cchUnicodeChar, 
+								lpASCIICharStr, 
+								cchASCIIChar
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, FormatMessage__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
+		public static int FormatMessage__0(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					global::System.Text.StringBuilder lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			ushort* unsafe_lpBuffer = default(ushort*);
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				if (lpBuffer == null)
+					unsafe_lpBuffer = null;
+				else
+				{
+					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
+										+ 2)));
+					if (unsafe_lpBuffer == null)
+						throw new global::System.OutOfMemoryException();
+				}
+				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
+				{
+					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage__0(
+										dwFlags, 
+										lpSource, 
+										dwMessageId, 
+										dwLanguageId, 
+										unsafe_lpBuffer, 
+										nSize, 
+										unsafe_arguments
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+				if (lpBuffer != null)
+					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+										unsafe_lpBuffer, 
+										lpBuffer
+									);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_lpBuffer != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
+			}
+		}
+
+		// Signature, FormatMessage__1, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
+		public static int FormatMessage__1(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					global::System.Text.StringBuilder lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			ushort* unsafe_lpBuffer = default(ushort*);
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				if (lpBuffer == null)
+					unsafe_lpBuffer = null;
+				else
+				{
+					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
+										+ 2)));
+					if (unsafe_lpBuffer == null)
+						throw new global::System.OutOfMemoryException();
+				}
+				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
+				{
+					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage__1(
+										dwFlags, 
+										lpSource, 
+										dwMessageId, 
+										dwLanguageId, 
+										unsafe_lpBuffer, 
+										nSize, 
+										unsafe_arguments
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+				if (lpBuffer != null)
+					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+										unsafe_lpBuffer, 
+										lpBuffer
+									);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_lpBuffer != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
+			}
+		}
+
+		// Signature, FormatMessage__2, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
+		public static int FormatMessage__2(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					global::System.Text.StringBuilder lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			ushort* unsafe_lpBuffer = default(ushort*);
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				if (lpBuffer == null)
+					unsafe_lpBuffer = null;
+				else
+				{
+					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
+										+ 2)));
+					if (unsafe_lpBuffer == null)
+						throw new global::System.OutOfMemoryException();
+				}
+				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
+				{
+					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage__2(
+										dwFlags, 
+										lpSource, 
+										dwMessageId, 
+										dwLanguageId, 
+										unsafe_lpBuffer, 
+										nSize, 
+										unsafe_arguments
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+				if (lpBuffer != null)
+					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+										unsafe_lpBuffer, 
+										lpBuffer
+									);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_lpBuffer != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
+			}
+		}
+
+		// Signature, FormatMessage__3, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" +
+			"", "Interop+mincore", "FormatMessage")]
+		public static int FormatMessage__3(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					global::System.Text.StringBuilder lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			ushort* unsafe_lpBuffer = default(ushort*);
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				if (lpBuffer == null)
+					unsafe_lpBuffer = null;
+				else
+				{
+					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
+										+ 2)));
+					if (unsafe_lpBuffer == null)
+						throw new global::System.OutOfMemoryException();
+				}
+				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
+				{
+					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage__3(
+										dwFlags, 
+										lpSource, 
+										dwMessageId, 
+										dwLanguageId, 
+										unsafe_lpBuffer, 
+										nSize, 
+										unsafe_arguments
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+				if (lpBuffer != null)
+					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+										unsafe_lpBuffer, 
+										lpBuffer
+									);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_lpBuffer != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
+			}
+		}
+
+		// Signature, FormatMessage__4, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Cryptography.Cng, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
+		public static int FormatMessage__4(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					global::System.Text.StringBuilder lpBuffer, 
+					int nSize, 
+					global::System.IntPtr[] arguments)
+		{
+			// Setup
+			ushort* unsafe_lpBuffer = default(ushort*);
+			global::System.IntPtr* unsafe_arguments;
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				if (lpBuffer == null)
+					unsafe_lpBuffer = null;
+				else
+				{
+					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
+										+ 2)));
+					if (unsafe_lpBuffer == null)
+						throw new global::System.OutOfMemoryException();
+				}
+				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
+				{
+					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_0_dll_PInvokes.FormatMessage__4(
+										dwFlags, 
+										lpSource, 
+										dwMessageId, 
+										dwLanguageId, 
+										unsafe_lpBuffer, 
+										nSize, 
+										unsafe_arguments
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+				if (lpBuffer != null)
+					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
+										unsafe_lpBuffer, 
+										lpBuffer
+									);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_lpBuffer != null)
+					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
+			}
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-libraryloader-l1-2-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_libraryloader_l1_2_0_dll
+	{
+		// Signature, FreeLibrary, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle+UnsafeNativeMethods", "FreeLibrary")]
+		public static bool FreeLibrary(global::System.IntPtr hModule)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_libraryloader_l1_2_0_dll_PInvokes.FreeLibrary(hModule);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, GetProcAddress, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.AnsiStringMarshaller] string__unsigned char *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle+UnsafeNativeMethods", "GetProcAddress")]
+		public static global::System.IntPtr GetProcAddress(
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal hModule, 
+					string lpProcName)
+		{
+			// Setup
+			bool addRefed = false;
+			byte* unsafe_lpProcName = default(byte*);
+			global::System.IntPtr unsafe___value;
+			try
+			{
+				// Marshalling
+				hModule.DangerousAddRef(ref addRefed);
+				unsafe_lpProcName = global::System.Runtime.InteropServices.McgMarshal.StringToAnsiString(lpProcName, true, false);
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_libraryloader_l1_2_0_dll_PInvokes.GetProcAddress(
+									hModule.DangerousGetHandle(), 
+									unsafe_lpProcName
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				if (addRefed)
+					hModule.DangerousRelease();
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpProcName);
+			}
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-libraryloader-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_libraryloader_l1_1_0_dll
+	{
+		// Signature, GetModuleHandleEx, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle+UnsafeNativeMethods", "GetModuleHandleEx")]
+		public static bool GetModuleHandleEx(
+					uint dwFlags, 
+					global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal lpModuleName, 
+					out global::System.IntPtr phModule)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr unsafe_phModule;
+			int unsafe___value;
+			// Marshalling
+			lpModuleName.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_libraryloader_l1_1_0_dll_PInvokes.GetModuleHandleEx(
+								dwFlags, 
+								lpModuleName.DangerousGetHandle(), 
+								&(unsafe_phModule)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			phModule = unsafe_phModule;
+			if (addRefed)
+				lpModuleName.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, LoadLibraryEx, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_AspNetCore_Cryptography_SafeHandles_SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.AspNetCore.Cryptography.Internal, Version=1.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60", "Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle+UnsafeNativeMethods", "LoadLibraryEx")]
+		public static global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal LoadLibraryEx(
+					string lpFileName, 
+					global::System.IntPtr hFile, 
+					uint dwFlags)
+		{
+			// Setup
+			ushort* unsafe_lpFileName = default(ushort*);
+			global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal __value;
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			fixed (char* pinned_lpFileName = lpFileName)
+			{
+				unsafe_lpFileName = (ushort*)pinned_lpFileName;
+				__value = new global::Microsoft.AspNetCore.Cryptography.SafeHandles.SafeLibraryHandle__Microsoft_AspNetCore_Cryptography_Internal();
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_libraryloader_l1_1_0_dll_PInvokes.LoadLibraryEx(
+									unsafe_lpFileName, 
+									hFile, 
+									dwFlags
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									__value, 
+									unsafe___value
+								);
+			}
+			// Return
+			return __value;
+		}
+	}
+
+	/// <summary>
 	/// P/Invoke class for module '[MRT]'
 	/// </summary>
 	public unsafe static partial class _MRT_
@@ -187,9 +2537,9 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-errorhandling-l1-1-1.dll'
+	/// P/Invoke class for module 'api-ms-win-core-errorhandling-l1-1-0.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_1_dll
+	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_0_dll
 	{
 		// Signature, GetLastError, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
@@ -200,7 +2550,7 @@ namespace __Interop
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_errorhandling_l1_1_1_dll_PInvokes.GetLastError();
+			unsafe___value = global::__Interop.api_ms_win_core_errorhandling_l1_1_0_dll_PInvokes.GetLastError();
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			// Return
 			return unsafe___value;
@@ -229,221 +2579,114 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-localization-l1-2-1.dll'
+	/// P/Invoke class for module 'api-ms-win-security-base-l1-1-0.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_localization_l1_2_1_dll
+	public unsafe static partial class api_ms_win_security_base_l1_1_0_dll
 	{
-		// Signature, IsValidLocaleName, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, 
+		// Signature, RevertToSelf, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.WinRTInterop.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "mincore+mincore_PInvokes", "IsValidLocaleName")]
-		public static int IsValidLocaleName(char* lpLocaleName)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "RevertToSelf")]
+		public static bool RevertToSelf()
 		{
 			// Setup
 			int unsafe___value;
 			// Marshalling
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.IsValidLocaleName(((ushort*)lpLocaleName));
+			unsafe___value = global::__Interop.api_ms_win_security_base_l1_1_0_dll_PInvokes.RevertToSelf();
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
 			// Return
-			return unsafe___value;
+			return unsafe___value != 0;
 		}
 
-		// Signature, ResolveLocaleName, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] char___ptrwchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
+		// Signature, ImpersonateLoggedOnUser, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__System_Security_Principal_Windows____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.WinRTInterop.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "mincore+mincore_PInvokes", "ResolveLocaleName")]
-		public static int ResolveLocaleName(
-					char* lpNameToResolve, 
-					char* lpLocaleName, 
-					int cchLocaleName)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "ImpersonateLoggedOnUser")]
+		public static bool ImpersonateLoggedOnUser(global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows userToken)
 		{
 			// Setup
+			bool addRefed = false;
 			int unsafe___value;
 			// Marshalling
+			userToken.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.ResolveLocaleName(
-								((ushort*)lpNameToResolve), 
-								((ushort*)lpLocaleName), 
-								cchLocaleName
+			unsafe___value = global::__Interop.api_ms_win_security_base_l1_1_0_dll_PInvokes.ImpersonateLoggedOnUser(userToken.DangerousGetHandle());
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				userToken.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, GetTokenInformation, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLocalAllocHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetTokenInformation")]
+		public static bool GetTokenInformation(
+					global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows TokenHandle, 
+					uint TokenInformationClass, 
+					global::Microsoft.Win32.SafeHandles.SafeLocalAllocHandle__System_Security_Principal_Windows TokenInformation, 
+					uint TokenInformationLength, 
+					out uint ReturnLength)
+		{
+			// Setup
+			bool addRefed = false;
+			bool addRefed_1 = false;
+			uint unsafe_ReturnLength;
+			int unsafe___value;
+			// Marshalling
+			TokenHandle.DangerousAddRef(ref addRefed);
+			TokenInformation.DangerousAddRef(ref addRefed_1);
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_security_base_l1_1_0_dll_PInvokes.GetTokenInformation(
+								TokenHandle.DangerousGetHandle(), 
+								TokenInformationClass, 
+								TokenInformation.DangerousGetHandle(), 
+								TokenInformationLength, 
+								&(unsafe_ReturnLength)
 							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			ReturnLength = unsafe_ReturnLength;
+			if (addRefed_1)
+				TokenInformation.DangerousRelease();
+			if (addRefed)
+				TokenHandle.DangerousRelease();
 			// Return
-			return unsafe___value;
+			return unsafe___value != 0;
 		}
 
-		// Signature, GetCPInfoExW, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages___ptr__Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages *, 
+		// Signature, GetTokenInformation__0, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLocalAllocHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Text.Encoding.CodePages, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetCPInfoExW")]
-		public static int GetCPInfoExW(
-					uint CodePage, 
-					uint dwFlags, 
-					global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages* lpCPInfoEx)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetTokenInformation")]
+		public static bool GetTokenInformation__0(
+					global::System.IntPtr TokenHandle, 
+					uint TokenInformationClass, 
+					global::Microsoft.Win32.SafeHandles.SafeLocalAllocHandle__System_Security_Principal_Windows TokenInformation, 
+					uint TokenInformationLength, 
+					out uint ReturnLength)
 		{
 			// Setup
+			bool addRefed = false;
+			uint unsafe_ReturnLength;
 			int unsafe___value;
 			// Marshalling
+			TokenInformation.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.GetCPInfoExW(
-								CodePage, 
-								dwFlags, 
-								((global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages*)lpCPInfoEx)
+			unsafe___value = global::__Interop.api_ms_win_security_base_l1_1_0_dll_PInvokes.GetTokenInformation__0(
+								TokenHandle, 
+								TokenInformationClass, 
+								TokenInformation.DangerousGetHandle(), 
+								TokenInformationLength, 
+								&(unsafe_ReturnLength)
 							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			ReturnLength = unsafe_ReturnLength;
+			if (addRefed)
+				TokenInformation.DangerousRelease();
 			// Return
-			return unsafe___value;
-		}
-
-		// Signature, FormatMessage, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
-		public static int FormatMessage(
-					int dwFlags, 
-					global::System.IntPtr lpSource, 
-					uint dwMessageId, 
-					int dwLanguageId, 
-					global::System.Text.StringBuilder lpBuffer, 
-					int nSize, 
-					global::System.IntPtr[] arguments)
-		{
-			// Setup
-			ushort* unsafe_lpBuffer = default(ushort*);
-			global::System.IntPtr* unsafe_arguments;
-			int unsafe___value;
-			try
-			{
-				// Marshalling
-				if (lpBuffer == null)
-					unsafe_lpBuffer = null;
-				else
-				{
-					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
-										+ 2)));
-					if (unsafe_lpBuffer == null)
-						throw new global::System.OutOfMemoryException();
-				}
-				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
-				{
-					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
-					// Call to native method
-					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.FormatMessage(
-										dwFlags, 
-										lpSource, 
-										dwMessageId, 
-										dwLanguageId, 
-										unsafe_lpBuffer, 
-										nSize, 
-										unsafe_arguments
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-				}
-				if (lpBuffer != null)
-					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
-										unsafe_lpBuffer, 
-										lpBuffer
-									);
-				// Return
-				return unsafe___value;
-			}
-			finally
-			{
-				// Cleanup
-				if (unsafe_lpBuffer != null)
-					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
-			}
-		}
-
-		// Signature, FormatMessage__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FormatMessage")]
-		public static int FormatMessage__0(
-					int dwFlags, 
-					global::System.IntPtr lpSource, 
-					uint dwMessageId, 
-					int dwLanguageId, 
-					global::System.Text.StringBuilder lpBuffer, 
-					int nSize, 
-					global::System.IntPtr[] arguments)
-		{
-			// Setup
-			ushort* unsafe_lpBuffer = default(ushort*);
-			global::System.IntPtr* unsafe_arguments;
-			int unsafe___value;
-			try
-			{
-				// Marshalling
-				if (lpBuffer == null)
-					unsafe_lpBuffer = null;
-				else
-				{
-					unsafe_lpBuffer = (ushort*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(new global::System.IntPtr(checked(lpBuffer.Capacity * 2 
-										+ 2)));
-					if (unsafe_lpBuffer == null)
-						throw new global::System.OutOfMemoryException();
-				}
-				fixed (global::System.IntPtr* pinned_arguments = global::__Interop.McgHelpers.GetArrayForCompat(arguments))
-				{
-					unsafe_arguments = (global::System.IntPtr*)pinned_arguments;
-					// Call to native method
-					unsafe___value = global::__Interop.api_ms_win_core_localization_l1_2_1_dll_PInvokes.FormatMessage__0(
-										dwFlags, 
-										lpSource, 
-										dwMessageId, 
-										dwLanguageId, 
-										unsafe_lpBuffer, 
-										nSize, 
-										unsafe_arguments
-									);
-					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-				}
-				if (lpBuffer != null)
-					global::System.Runtime.InteropServices.McgMarshal.UnicodeStringToStringBuilder(
-										unsafe_lpBuffer, 
-										lpBuffer
-									);
-				// Return
-				return unsafe___value;
-			}
-			finally
-			{
-				// Cleanup
-				if (unsafe_lpBuffer != null)
-					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_lpBuffer);
-			}
-		}
-	}
-
-	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-com-l1-1-0.dll'
-	/// </summary>
-	public unsafe static partial class api_ms_win_core_com_l1_1_0_dll
-	{
-		// Signature, CoCreateInstance, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.StackTraceGenerator.StackTraceGenerator", "CoCreateInstance")]
-		public static int CoCreateInstance(
-					byte* rclsid, 
-					global::System.IntPtr pUnkOuter, 
-					int dwClsContext, 
-					byte* riid, 
-					out global::System.IntPtr ppv)
-		{
-			// Setup
-			global::System.IntPtr unsafe_ppv;
-			int unsafe___value;
-			// Marshalling
-			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_com_l1_1_0_dll_PInvokes.CoCreateInstance(
-								((byte*)rclsid), 
-								pUnkOuter, 
-								dwClsContext, 
-								((byte*)riid), 
-								&(unsafe_ppv)
-							);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			ppv = unsafe_ppv;
-			// Return
-			return unsafe___value;
+			return unsafe___value != 0;
 		}
 	}
 
@@ -454,7 +2697,7 @@ namespace __Interop
 	{
 		// Signature, RtlIpv6AddressToStringExW, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] ushort__unsigned short, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Net.Primitives, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NtDll", "RtlIpv6AddressToStringExW")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Net.Primitives, Version=4.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NtDll", "RtlIpv6AddressToStringExW")]
 		public static uint RtlIpv6AddressToStringExW(
 					byte[] address, 
 					uint scopeId, 
@@ -512,7 +2755,7 @@ namespace __Interop
 
 		// Signature, RtlIpv4AddressToStringExW, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_byte__unsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] ushort__unsigned short, [fwd] [out] [Mcg.CodeGen.StringBuilderMarshaller] System_Text_StringBuilder__wchar_t *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Net.Primitives, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NtDll", "RtlIpv4AddressToStringExW")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Net.Primitives, Version=4.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+NtDll", "RtlIpv4AddressToStringExW")]
 		public static uint RtlIpv4AddressToStringExW(
 					byte[] address, 
 					ushort port, 
@@ -565,144 +2808,407 @@ namespace __Interop
 					global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_addressString);
 			}
 		}
-	}
 
-	/// <summary>
-	/// P/Invoke class for module 'oleaut32.dll'
-	/// </summary>
-	public unsafe static partial class oleaut32_dll
-	{
-		// Signature, SysFreeString, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		// Signature, RtlNtStatusToDosError, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.LightweightInterop.MarshalExtensions", "SysFreeString")]
-		public static void SysFreeString(global::System.IntPtr bstr)
-		{
-			// Marshalling
-			// Call to native method
-			global::__Interop.oleaut32_dll_PInvokes.SysFreeString(bstr);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			// Return
-		}
-	}
-
-	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-winrt-robuffer-l1-1-0.dll'
-	/// </summary>
-	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll
-	{
-		// Signature, RoGetBufferMarshaler, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] System_Runtime_InteropServices_IMarshal__System_Runtime_WindowsRuntime__System_Runtime_InteropServices__IMarshal__System_Runtime_WindowsRuntime *, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Runtime.WindowsRuntime, Version=4.0.11.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "Interop+mincore", "RoGetBufferMarshaler")]
-		public static int RoGetBufferMarshaler(out global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime bufferMarshalerPtr)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "RtlNtStatusToDosError")]
+		public static int RtlNtStatusToDosError(int status)
 		{
 			// Setup
-			void* unsafe_bufferMarshalerPtr = default(void*);
-			int unsafe___value;
-			try
-			{
-				// Marshalling
-				unsafe_bufferMarshalerPtr = null;
-				// Call to native method
-				unsafe___value = global::__Interop.api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes.RoGetBufferMarshaler(&(unsafe_bufferMarshalerPtr));
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				bufferMarshalerPtr = (global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
-									((global::System.IntPtr)unsafe_bufferMarshalerPtr), 
-									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("System.Runtime.InteropServices.IMarshal,System.Runtime.WindowsRuntime, Version=4.0.11.0, Culture=neutral, Public" +
-											"KeyToken=b77a5c561934e089")
-								);
-				// Return
-				return unsafe___value;
-			}
-			finally
-			{
-				// Cleanup
-				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_bufferMarshalerPtr)));
-			}
-		}
-	}
-
-	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-file-l1-2-1.dll'
-	/// </summary>
-	public unsafe static partial class api_ms_win_core_file_l1_2_1_dll
-	{
-		// Signature, GetFileType, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileType")]
-		public static int GetFileType(global::System.Runtime.InteropServices.SafeHandle hFile)
-		{
-			// Setup
-			bool addRefed = false;
 			int unsafe___value;
 			// Marshalling
-			hFile.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.GetFileType(hFile.DangerousGetHandle());
+			unsafe___value = global::__Interop.ntdll_dll_PInvokes.RtlNtStatusToDosError(status);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-			if (addRefed)
-				hFile.DangerousRelease();
 			// Return
 			return unsafe___value;
 		}
+	}
 
-		// Signature, SetFilePointerEx, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] long____int64, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] long____int64, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-heap-l2-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_heap_l2_1_0_dll
+	{
+		// Signature, LocalAlloc, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLocalAllocHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_UIntPtr____w64 unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "SetFilePointerEx")]
-		public static bool SetFilePointerEx(
-					global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem hFile, 
-					long liDistanceToMove, 
-					out long lpNewFilePointer, 
-					uint dwMoveMethod)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore_obsolete", "LocalAlloc")]
+		public static global::Microsoft.Win32.SafeHandles.SafeLocalAllocHandle__System_Security_Principal_Windows LocalAlloc(
+					int uFlags, 
+					global::System.UIntPtr sizetdwBytes)
 		{
 			// Setup
-			bool addRefed = false;
-			long unsafe_lpNewFilePointer;
-			int unsafe___value;
+			global::Microsoft.Win32.SafeHandles.SafeLocalAllocHandle__System_Security_Principal_Windows __value;
+			global::System.IntPtr unsafe___value;
 			// Marshalling
-			hFile.DangerousAddRef(ref addRefed);
+			__value = new global::Microsoft.Win32.SafeHandles.SafeLocalAllocHandle__System_Security_Principal_Windows();
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.SetFilePointerEx(
-								hFile.DangerousGetHandle(), 
-								liDistanceToMove, 
-								&(unsafe_lpNewFilePointer), 
-								dwMoveMethod
+			unsafe___value = global::__Interop.api_ms_win_core_heap_l2_1_0_dll_PInvokes.LocalAlloc(
+								uFlags, 
+								sizetdwBytes
 							);
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-			lpNewFilePointer = unsafe_lpNewFilePointer;
-			if (addRefed)
-				hFile.DangerousRelease();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								__value, 
+								unsafe___value
+							);
+			// Return
+			return __value;
+		}
+
+		// Signature, LocalFree, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore_obsolete", "LocalFree")]
+		public static global::System.IntPtr LocalFree(global::System.IntPtr handle)
+		{
+			// Setup
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_heap_l2_1_0_dll_PInvokes.LocalFree(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-handle-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_handle_l1_1_0_dll
+	{
+		// Signature, CloseHandle, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CloseHandle")]
+		public static bool CloseHandle(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_handle_l1_1_0_dll_PInvokes.CloseHandle(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
 			// Return
 			return unsafe___value != 0;
 		}
 
-		// Signature, GetFileAttributesExPrivate, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem__Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem____Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem, 
+		// Signature, DuplicateHandle, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileAttributesExPrivate")]
-		public static bool GetFileAttributesExPrivate(
-					string name, 
-					global::Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem fileInfoLevel, 
-					ref global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem lpFileInformation)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "DuplicateHandle")]
+		public static bool DuplicateHandle(
+					global::System.IntPtr hSourceProcessHandle, 
+					global::System.IntPtr hSourceHandle, 
+					global::System.IntPtr hTargetProcessHandle, 
+					ref global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows lpTargetHandle, 
+					uint dwDesiredAccess, 
+					bool bInheritHandle, 
+					uint dwOptions)
 		{
 			// Setup
-			ushort* unsafe_name = default(ushort*);
-			global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem unsafe_lpFileInformation;
+			bool addRefed = false;
+			global::System.IntPtr unsafe_lpTargetHandle;
+			global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows out_lpTargetHandle;
+			global::System.IntPtr prev_unsafe_lpTargetHandle;
 			int unsafe___value;
 			// Marshalling
-			fixed (char* pinned_name = name)
+			lpTargetHandle.DangerousAddRef(ref addRefed);
+			unsafe_lpTargetHandle = lpTargetHandle.DangerousGetHandle();
+			prev_unsafe_lpTargetHandle = unsafe_lpTargetHandle;
+			out_lpTargetHandle = new global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows();
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_handle_l1_1_0_dll_PInvokes.DuplicateHandle(
+								hSourceProcessHandle, 
+								hSourceHandle, 
+								hTargetProcessHandle, 
+								&(unsafe_lpTargetHandle), 
+								dwDesiredAccess, 
+								(bInheritHandle ? 1 : 0), 
+								dwOptions
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				lpTargetHandle.DangerousRelease();
+			if (prev_unsafe_lpTargetHandle != unsafe_lpTargetHandle)
 			{
-				unsafe_name = (ushort*)pinned_name;
-				unsafe_lpFileInformation = lpFileInformation;
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									out_lpTargetHandle, 
+									unsafe_lpTargetHandle
+								);
+				lpTargetHandle = out_lpTargetHandle;
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, CloseHandle__0, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CloseHandle")]
+		public static bool CloseHandle__0(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_handle_l1_1_0_dll_PInvokes.CloseHandle__0(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value != 0;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-processthreads-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_processthreads_l1_1_0_dll
+	{
+		// Signature, GetCurrentThread, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetCurrentThread")]
+		public static global::System.IntPtr GetCurrentThread()
+		{
+			// Setup
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_processthreads_l1_1_0_dll_PInvokes.GetCurrentThread();
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, OpenThreadToken, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Principal_TokenAccessLevels__System_Security_Principal_Windows__TokenAccessLevels__System_Security_Principal_Windows, [fwd] [in] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "OpenThreadToken")]
+		public static bool OpenThreadToken(
+					global::System.IntPtr ThreadHandle, 
+					global::System.Security.Principal.TokenAccessLevels__System_Security_Principal_Windows dwDesiredAccess, 
+					bool bOpenAsSelf, 
+					out global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows phThreadToken)
+		{
+			// Setup
+			global::System.IntPtr unsafe_phThreadToken;
+			int unsafe___value;
+			// Marshalling
+			phThreadToken = new global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows();
+			unsafe_phThreadToken = phThreadToken.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_processthreads_l1_1_0_dll_PInvokes.OpenThreadToken(
+								ThreadHandle, 
+								dwDesiredAccess, 
+								(bOpenAsSelf ? 1 : 0), 
+								&(unsafe_phThreadToken)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								phThreadToken, 
+								unsafe_phThreadToken
+							);
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, GetCurrentProcess, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetCurrentProcess")]
+		public static global::System.IntPtr GetCurrentProcess()
+		{
+			// Setup
+			global::System.IntPtr unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_processthreads_l1_1_0_dll_PInvokes.GetCurrentProcess();
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, OpenProcessToken, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_Security_Principal_TokenAccessLevels__System_Security_Principal_Windows__TokenAccessLevels__System_Security_Principal_Windows, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeAccessTokenHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "OpenProcessToken")]
+		public static bool OpenProcessToken(
+					global::System.IntPtr ProcessToken, 
+					global::System.Security.Principal.TokenAccessLevels__System_Security_Principal_Windows DesiredAccess, 
+					out global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows TokenHandle)
+		{
+			// Setup
+			global::System.IntPtr unsafe_TokenHandle;
+			int unsafe___value;
+			// Marshalling
+			TokenHandle = new global::Microsoft.Win32.SafeHandles.SafeAccessTokenHandle__System_Security_Principal_Windows();
+			unsafe_TokenHandle = TokenHandle.DangerousGetHandle();
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_processthreads_l1_1_0_dll_PInvokes.OpenProcessToken(
+								ProcessToken, 
+								DesiredAccess, 
+								&(unsafe_TokenHandle)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+								TokenHandle, 
+								unsafe_TokenHandle
+							);
+			// Return
+			return unsafe___value != 0;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'sspicli.dll'
+	/// </summary>
+	public unsafe static partial class sspicli_dll
+	{
+		// Signature, LsaGetLogonSessionData, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_LUID__System_Security_Principal_Windows____Interop_LUID__System_Security_Principal_Windows, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaReturnBufferHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaGetLogonSessionData")]
+		public static int LsaGetLogonSessionData(
+					ref global::Interop_LUID__System_Security_Principal_Windows LogonId, 
+					ref global::Microsoft.Win32.SafeHandles.SafeLsaReturnBufferHandle__System_Security_Principal_Windows ppLogonSessionData)
+		{
+			// Setup
+			global::Interop_LUID__System_Security_Principal_Windows unsafe_LogonId;
+			bool addRefed = false;
+			global::System.IntPtr unsafe_ppLogonSessionData;
+			global::Microsoft.Win32.SafeHandles.SafeLsaReturnBufferHandle__System_Security_Principal_Windows out_ppLogonSessionData;
+			global::System.IntPtr prev_unsafe_ppLogonSessionData;
+			int unsafe___value;
+			// Marshalling
+			unsafe_LogonId = LogonId;
+			ppLogonSessionData.DangerousAddRef(ref addRefed);
+			unsafe_ppLogonSessionData = ppLogonSessionData.DangerousGetHandle();
+			prev_unsafe_ppLogonSessionData = unsafe_ppLogonSessionData;
+			out_ppLogonSessionData = new global::Microsoft.Win32.SafeHandles.SafeLsaReturnBufferHandle__System_Security_Principal_Windows();
+			// Call to native method
+			unsafe___value = global::__Interop.sspicli_dll_PInvokes.LsaGetLogonSessionData(
+								&(unsafe_LogonId), 
+								&(unsafe_ppLogonSessionData)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				ppLogonSessionData.DangerousRelease();
+			if (prev_unsafe_ppLogonSessionData != unsafe_ppLogonSessionData)
+			{
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									out_ppLogonSessionData, 
+									unsafe_ppLogonSessionData
+								);
+				ppLogonSessionData = out_ppLogonSessionData;
+			}
+			LogonId = unsafe_LogonId;
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, LsaFreeReturnBuffer, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaFreeReturnBuffer")]
+		public static int LsaFreeReturnBuffer(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.sspicli_dll_PInvokes.LsaFreeReturnBuffer(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-com-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_com_l1_1_0_dll
+	{
+		// Signature, CoCreateInstance, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.StackTraceGenerator.StackTraceGenerator", "CoCreateInstance")]
+		public static int CoCreateInstance(
+					byte* rclsid, 
+					global::System.IntPtr pUnkOuter, 
+					int dwClsContext, 
+					byte* riid, 
+					out global::System.IntPtr ppv)
+		{
+			// Setup
+			global::System.IntPtr unsafe_ppv;
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_com_l1_1_0_dll_PInvokes.CoCreateInstance(
+								((byte*)rclsid), 
+								pUnkOuter, 
+								dwClsContext, 
+								((byte*)riid), 
+								&(unsafe_ppv)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			ppv = unsafe_ppv;
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-file-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_file_l1_1_0_dll
+	{
+		// Signature, CreateDirectoryPrivate, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_SECURITY_ATTRIBUTES__System_IO_FileSystem____Interop_mincore_SECURITY_ATTRIBUTES__System_IO_FileSystem, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CreateDirectoryPrivate")]
+		public static bool CreateDirectoryPrivate(
+					string path, 
+					ref global::Interop_mincore_SECURITY_ATTRIBUTES__System_IO_FileSystem lpSecurityAttributes)
+		{
+			// Setup
+			ushort* unsafe_path = default(ushort*);
+			global::Interop_mincore_SECURITY_ATTRIBUTES__System_IO_FileSystem unsafe_lpSecurityAttributes;
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_path = path)
+			{
+				unsafe_path = (ushort*)pinned_path;
+				unsafe_lpSecurityAttributes = lpSecurityAttributes;
 				// Call to native method
-				unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.GetFileAttributesExPrivate(
-									unsafe_name, 
-									fileInfoLevel, 
-									&(unsafe_lpFileInformation)
+				unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.CreateDirectoryPrivate(
+									unsafe_path, 
+									&(unsafe_lpSecurityAttributes)
 								);
 				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-				lpFileInformation = unsafe_lpFileInformation;
+				lpSecurityAttributes = unsafe_lpSecurityAttributes;
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, DeleteFilePrivate, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "DeleteFilePrivate")]
+		public static bool DeleteFilePrivate(string path)
+		{
+			// Setup
+			ushort* unsafe_path = default(ushort*);
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_path = path)
+			{
+				unsafe_path = (ushort*)pinned_path;
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.DeleteFilePrivate(unsafe_path);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
 			}
 			// Return
 			return unsafe___value != 0;
@@ -710,7 +3216,7 @@ namespace __Interop
 
 		// Signature, FindFirstFileExPrivate, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFindHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_mincore_FINDEX_INFO_LEVELS__System_IO_FileSystem__Interop_mincore_FINDEX_INFO_LEVELS__System_IO_FileSystem, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.StructMarshaller] Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem____Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_mincore_FINDEX_SEARCH_OPS__System_IO_FileSystem__Interop_mincore_FINDEX_SEARCH_OPS__System_IO_FileSystem, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FindFirstFileExPrivate")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FindFirstFileExPrivate")]
 		public static global::Microsoft.Win32.SafeHandles.SafeFindHandle__System_IO_FileSystem FindFirstFileExPrivate(
 					string lpFileName, 
 					global::Interop_mincore_FINDEX_INFO_LEVELS__System_IO_FileSystem fInfoLevelId, 
@@ -734,7 +3240,7 @@ namespace __Interop
 								);
 				__value = new global::Microsoft.Win32.SafeHandles.SafeFindHandle__System_IO_FileSystem();
 				// Call to native method
-				unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.FindFirstFileExPrivate(
+				unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.FindFirstFileExPrivate(
 									unsafe_lpFileName, 
 									fInfoLevelId, 
 									&(unsafe_lpFindFileData), 
@@ -757,9 +3263,141 @@ namespace __Interop
 			return __value;
 		}
 
+		// Signature, GetFileAttributesExPrivate, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem__Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem____Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileAttributesExPrivate")]
+		public static bool GetFileAttributesExPrivate(
+					string name, 
+					global::Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem fileInfoLevel, 
+					ref global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem lpFileInformation)
+		{
+			// Setup
+			ushort* unsafe_name = default(ushort*);
+			global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem unsafe_lpFileInformation;
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_name = name)
+			{
+				unsafe_name = (ushort*)pinned_name;
+				unsafe_lpFileInformation = lpFileInformation;
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.GetFileAttributesExPrivate(
+									unsafe_name, 
+									fileInfoLevel, 
+									&(unsafe_lpFileInformation)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				lpFileInformation = unsafe_lpFileInformation;
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, GetFileType, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileType")]
+		public static int GetFileType(global::System.Runtime.InteropServices.SafeHandle hFile)
+		{
+			// Setup
+			bool addRefed = false;
+			int unsafe___value;
+			// Marshalling
+			hFile.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.GetFileType(hFile.DangerousGetHandle());
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			if (addRefed)
+				hFile.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, FindNextFile, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFindHandle__System_IO_FileSystem____w64 int, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.StructMarshaller] Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem____Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FindNextFile")]
+		public static bool FindNextFile(
+					global::Microsoft.Win32.SafeHandles.SafeFindHandle__System_IO_FileSystem hndFindFile, 
+					ref global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem lpFindFileData)
+		{
+			// Setup
+			bool addRefed = false;
+			global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem__Impl.UnsafeType unsafe_lpFindFileData = default(global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem__Impl.UnsafeType);
+			int unsafe___value;
+			// Marshalling
+			hndFindFile.DangerousAddRef(ref addRefed);
+			global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem__Impl.Marshal__SafeToUnsafe(
+								ref lpFindFileData, 
+								out unsafe_lpFindFileData
+							);
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.FindNextFile(
+								hndFindFile.DangerousGetHandle(), 
+								&(unsafe_lpFindFileData)
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem__Impl.Marshal__UnsafeToSafe(
+								ref unsafe_lpFindFileData, 
+								out lpFindFileData
+							);
+			if (addRefed)
+				hndFindFile.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, SetFilePointerEx, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] long____int64, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] long____int64, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "SetFilePointerEx")]
+		public static bool SetFilePointerEx(
+					global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem hFile, 
+					long liDistanceToMove, 
+					out long lpNewFilePointer, 
+					uint dwMoveMethod)
+		{
+			// Setup
+			bool addRefed = false;
+			long unsafe_lpNewFilePointer;
+			int unsafe___value;
+			// Marshalling
+			hFile.DangerousAddRef(ref addRefed);
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.SetFilePointerEx(
+								hFile.DangerousGetHandle(), 
+								liDistanceToMove, 
+								&(unsafe_lpNewFilePointer), 
+								dwMoveMethod
+							);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			lpNewFilePointer = unsafe_lpNewFilePointer;
+			if (addRefed)
+				hFile.DangerousRelease();
+			// Return
+			return unsafe___value != 0;
+		}
+
+		// Signature, FindClose, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FindClose")]
+		public static bool FindClose(global::System.IntPtr hFindFile)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.FindClose(hFindFile);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value != 0;
+		}
+
 		// Signature, SetEndOfFile, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "SetEndOfFile")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "SetEndOfFile")]
 		public static bool SetEndOfFile(global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem hFile)
 		{
 			// Setup
@@ -768,7 +3406,7 @@ namespace __Interop
 			// Marshalling
 			hFile.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.SetEndOfFile(hFile.DangerousGetHandle());
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.SetEndOfFile(hFile.DangerousGetHandle());
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
 			if (addRefed)
@@ -777,65 +3415,9 @@ namespace __Interop
 			return unsafe___value != 0;
 		}
 
-		// Signature, CreateFile2, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_IO_FileShare__System_IO_FileSystem_Primitives__FileShare__System_IO_FileSystem_Primitives, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_IO_FileMode__System_IO_FileSystem_Primitives__FileMode__System_IO_FileSystem_Primitives, [fwd] [in] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem____Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CreateFile2")]
-		public static global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem CreateFile2(
-					string lpFileName, 
-					int dwDesiredAccess, 
-					global::System.IO.FileShare__System_IO_FileSystem_Primitives dwShareMode, 
-					global::System.IO.FileMode__System_IO_FileSystem_Primitives dwCreationDisposition, 
-					ref global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem parameters)
-		{
-			// Setup
-			ushort* unsafe_lpFileName = default(ushort*);
-			global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem unsafe_parameters;
-			global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem __value;
-			global::System.IntPtr unsafe___value;
-			// Marshalling
-			fixed (char* pinned_lpFileName = lpFileName)
-			{
-				unsafe_lpFileName = (ushort*)pinned_lpFileName;
-				unsafe_parameters = parameters;
-				__value = new global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem();
-				// Call to native method
-				unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.CreateFile2(
-									unsafe_lpFileName, 
-									dwDesiredAccess, 
-									dwShareMode, 
-									dwCreationDisposition, 
-									&(unsafe_parameters)
-								);
-				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
-									__value, 
-									unsafe___value
-								);
-			}
-			// Return
-			return __value;
-		}
-
-		// Signature, FindClose, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
-		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FindClose")]
-		public static bool FindClose(global::System.IntPtr hFindFile)
-		{
-			// Setup
-			int unsafe___value;
-			// Marshalling
-			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.FindClose(hFindFile);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
-			// Return
-			return unsafe___value != 0;
-		}
-
 		// Signature, ReadFile, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_Threading_NativeOverlapped__System_Threading_Overlapped___ptrSystem_Threading__NativeOverlapped__System_Threading_Overlapped *, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "ReadFile")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "ReadFile")]
 		public static int ReadFile(
 					global::System.Runtime.InteropServices.SafeHandle handle, 
 					byte* bytes, 
@@ -849,7 +3431,7 @@ namespace __Interop
 			// Marshalling
 			handle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.ReadFile(
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.ReadFile(
 								handle.DangerousGetHandle(), 
 								((byte*)bytes), 
 								numBytesToRead, 
@@ -866,7 +3448,7 @@ namespace __Interop
 
 		// Signature, ReadFile__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "ReadFile")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "ReadFile")]
 		public static int ReadFile__0(
 					global::System.Runtime.InteropServices.SafeHandle handle, 
 					byte* bytes, 
@@ -881,7 +3463,7 @@ namespace __Interop
 			// Marshalling
 			handle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.ReadFile__0(
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.ReadFile__0(
 								handle.DangerousGetHandle(), 
 								((byte*)bytes), 
 								numBytesToRead, 
@@ -899,7 +3481,7 @@ namespace __Interop
 
 		// Signature, WriteFile, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_Threading_NativeOverlapped__System_Threading_Overlapped___ptrSystem_Threading__NativeOverlapped__System_Threading_Overlapped *, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "WriteFile")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "WriteFile")]
 		public static int WriteFile(
 					global::System.Runtime.InteropServices.SafeHandle handle, 
 					byte* bytes, 
@@ -913,7 +3495,7 @@ namespace __Interop
 			// Marshalling
 			handle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.WriteFile(
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.WriteFile(
 								handle.DangerousGetHandle(), 
 								((byte*)bytes), 
 								numBytesToWrite, 
@@ -930,7 +3512,7 @@ namespace __Interop
 
 		// Signature, WriteFile__0, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] byte___ptrunsigned char *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "WriteFile")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "WriteFile")]
 		public static int WriteFile__0(
 					global::System.Runtime.InteropServices.SafeHandle handle, 
 					byte* bytes, 
@@ -945,7 +3527,7 @@ namespace __Interop
 			// Marshalling
 			handle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.WriteFile__0(
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.WriteFile__0(
 								handle.DangerousGetHandle(), 
 								((byte*)bytes), 
 								numBytesToWrite, 
@@ -963,7 +3545,7 @@ namespace __Interop
 
 		// Signature, FlushFileBuffers, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FlushFileBuffers")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "FlushFileBuffers")]
 		public static bool FlushFileBuffers(global::System.Runtime.InteropServices.SafeHandle hHandle)
 		{
 			// Setup
@@ -972,7 +3554,7 @@ namespace __Interop
 			// Marshalling
 			hHandle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_1_dll_PInvokes.FlushFileBuffers(hHandle.DangerousGetHandle());
+			unsafe___value = global::__Interop.api_ms_win_core_file_l1_1_0_dll_PInvokes.FlushFileBuffers(hHandle.DangerousGetHandle());
 			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
 			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
 			if (addRefed)
@@ -983,13 +3565,46 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-file-l2-1-1.dll'
+	/// P/Invoke class for module 'api-ms-win-core-file-l2-1-0.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_file_l2_1_1_dll
+	public unsafe static partial class api_ms_win_core_file_l2_1_0_dll
 	{
+		// Signature, MoveFileExPrivate, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "MoveFileExPrivate")]
+		public static bool MoveFileExPrivate(
+					string src, 
+					string dst, 
+					uint flags)
+		{
+			// Setup
+			ushort* unsafe_src = default(ushort*);
+			ushort* unsafe_dst = default(ushort*);
+			int unsafe___value;
+			// Marshalling
+			fixed (char* pinned_src = src)
+			{
+				unsafe_src = (ushort*)pinned_src;
+				fixed (char* pinned_dst = dst)
+				{
+					unsafe_dst = (ushort*)pinned_dst;
+					// Call to native method
+					unsafe___value = global::__Interop.api_ms_win_core_file_l2_1_0_dll_PInvokes.MoveFileExPrivate(
+										unsafe_src, 
+										unsafe_dst, 
+										flags
+									);
+					global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+					global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				}
+			}
+			// Return
+			return unsafe___value != 0;
+		}
+
 		// Signature, GetFileInformationByHandleEx, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] Interop_mincore_FILE_INFO_BY_HANDLE_CLASS__System_IO_FileSystem__Interop_mincore_FILE_INFO_BY_HANDLE_CLASS__System_IO_FileSystem, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_FILE_STANDARD_INFO__System_IO_FileSystem____Interop_mincore_FILE_STANDARD_INFO__System_IO_FileSystem, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileInformationByHandleEx")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "GetFileInformationByHandleEx")]
 		public static bool GetFileInformationByHandleEx(
 					global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem hFile, 
 					global::Interop_mincore_FILE_INFO_BY_HANDLE_CLASS__System_IO_FileSystem FileInformationClass, 
@@ -1003,7 +3618,7 @@ namespace __Interop
 			// Marshalling
 			hFile.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_file_l2_1_1_dll_PInvokes.GetFileInformationByHandleEx(
+			unsafe___value = global::__Interop.api_ms_win_core_file_l2_1_0_dll_PInvokes.GetFileInformationByHandleEx(
 								hFile.DangerousGetHandle(), 
 								FileInformationClass, 
 								&(unsafe_lpFileInformation), 
@@ -1020,13 +3635,281 @@ namespace __Interop
 	}
 
 	/// <summary>
+	/// P/Invoke class for module 'oleaut32.dll'
+	/// </summary>
+	public unsafe static partial class oleaut32_dll
+	{
+		// Signature, SysFreeString, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Private.StackTraceGenerator, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Internal.LightweightInterop.MarshalExtensions", "SysFreeString")]
+		public static void SysFreeString(global::System.IntPtr bstr)
+		{
+			// Marshalling
+			// Call to native method
+			global::__Interop.oleaut32_dll_PInvokes.SysFreeString(bstr);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			// Return
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-security-lsapolicy-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_security_lsapolicy_l1_1_0_dll
+	{
+		// Signature, LsaLookupSids, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaPolicyHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableArrayMarshaller] rg_System_IntPtr____w64 int *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaMemoryHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaMemoryHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaLookupSids")]
+		public static uint LsaLookupSids(
+					global::Microsoft.Win32.SafeHandles.SafeLsaPolicyHandle__System_Security_Principal_Windows handle, 
+					int count, 
+					global::System.IntPtr[] sids, 
+					ref global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows referencedDomains, 
+					ref global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows names)
+		{
+			// Setup
+			bool addRefed = false;
+			global::System.IntPtr* unsafe_sids;
+			bool addRefed_1 = false;
+			global::System.IntPtr unsafe_referencedDomains;
+			global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows out_referencedDomains;
+			global::System.IntPtr prev_unsafe_referencedDomains;
+			bool addRefed_2 = false;
+			global::System.IntPtr unsafe_names;
+			global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows out_names;
+			global::System.IntPtr prev_unsafe_names;
+			uint unsafe___value;
+			// Marshalling
+			handle.DangerousAddRef(ref addRefed);
+			fixed (global::System.IntPtr* pinned_sids = global::__Interop.McgHelpers.GetArrayForCompat(sids))
+			{
+				unsafe_sids = (global::System.IntPtr*)pinned_sids;
+				referencedDomains.DangerousAddRef(ref addRefed_1);
+				unsafe_referencedDomains = referencedDomains.DangerousGetHandle();
+				prev_unsafe_referencedDomains = unsafe_referencedDomains;
+				out_referencedDomains = new global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows();
+				names.DangerousAddRef(ref addRefed_2);
+				unsafe_names = names.DangerousGetHandle();
+				prev_unsafe_names = unsafe_names;
+				out_names = new global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows();
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes.LsaLookupSids(
+									handle.DangerousGetHandle(), 
+									count, 
+									unsafe_sids, 
+									&(unsafe_referencedDomains), 
+									&(unsafe_names)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				if (addRefed_2)
+					names.DangerousRelease();
+				if (prev_unsafe_names != unsafe_names)
+				{
+					global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+										out_names, 
+										unsafe_names
+									);
+					names = out_names;
+				}
+				if (addRefed_1)
+					referencedDomains.DangerousRelease();
+				if (prev_unsafe_referencedDomains != unsafe_referencedDomains)
+				{
+					global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+										out_referencedDomains, 
+										unsafe_referencedDomains
+									);
+					referencedDomains = out_referencedDomains;
+				}
+			}
+			if (addRefed)
+				handle.DangerousRelease();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, LsaLookupNames2, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaPolicyHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.ArrayMarshaller] rg_Interop_UNICODE_STRING__System_Security_Principal_Windows____Interop_UNICODE_STRING__System_Security_Principal_Windows *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaMemoryHandle__System_Security_Principal_Windows____w64 int, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaMemoryHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaLookupNames2")]
+		public static uint LsaLookupNames2(
+					global::Microsoft.Win32.SafeHandles.SafeLsaPolicyHandle__System_Security_Principal_Windows handle, 
+					int flags, 
+					int count, 
+					global::Interop_UNICODE_STRING__System_Security_Principal_Windows[] names, 
+					ref global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows referencedDomains, 
+					ref global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows sids)
+		{
+			// Setup
+			bool addRefed = false;
+			global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.UnsafeType* unsafe_names = default(global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.UnsafeType*);
+			bool addRefed_1 = false;
+			global::System.IntPtr unsafe_referencedDomains;
+			global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows out_referencedDomains;
+			global::System.IntPtr prev_unsafe_referencedDomains;
+			bool addRefed_2 = false;
+			global::System.IntPtr unsafe_sids;
+			global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows out_sids;
+			global::System.IntPtr prev_unsafe_sids;
+			uint unsafe___value;
+			try
+			{
+				// Marshalling
+				handle.DangerousAddRef(ref addRefed);
+				if (names == null)
+					unsafe_names = null;
+				else
+				{
+					if (names != null)
+						unsafe_names = (global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.UnsafeType*)global::__Interop.McgHelpers.CoTaskMemAllocAndZeroMemory(((global::System.IntPtr)checked(names.Length * sizeof(global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.UnsafeType))));
+					if (names != null)
+						for (uint mcgIdx = 0; (mcgIdx < names.Length); mcgIdx++)
+						{
+							// [fwd] [in] [optional] [Mcg.CodeGen.StructMarshaller] Interop_UNICODE_STRING__System_Security_Principal_Windows____Interop_UNICODE_STRING__System_Security_Principal_Windows names
+							global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.Marshal__SafeToUnsafe(
+												ref names[mcgIdx], 
+												out unsafe_names[mcgIdx]
+											);
+						}
+				}
+				referencedDomains.DangerousAddRef(ref addRefed_1);
+				unsafe_referencedDomains = referencedDomains.DangerousGetHandle();
+				prev_unsafe_referencedDomains = unsafe_referencedDomains;
+				out_referencedDomains = new global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows();
+				sids.DangerousAddRef(ref addRefed_2);
+				unsafe_sids = sids.DangerousGetHandle();
+				prev_unsafe_sids = unsafe_sids;
+				out_sids = new global::Microsoft.Win32.SafeHandles.SafeLsaMemoryHandle__System_Security_Principal_Windows();
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes.LsaLookupNames2(
+									handle.DangerousGetHandle(), 
+									flags, 
+									count, 
+									unsafe_names, 
+									&(unsafe_referencedDomains), 
+									&(unsafe_sids)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				if (addRefed_2)
+					sids.DangerousRelease();
+				if (prev_unsafe_sids != unsafe_sids)
+				{
+					global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+										out_sids, 
+										unsafe_sids
+									);
+					sids = out_sids;
+				}
+				if (addRefed_1)
+					referencedDomains.DangerousRelease();
+				if (prev_unsafe_referencedDomains != unsafe_referencedDomains)
+				{
+					global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+										out_referencedDomains, 
+										unsafe_referencedDomains
+									);
+					referencedDomains = out_referencedDomains;
+				}
+				if (addRefed)
+					handle.DangerousRelease();
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				if (unsafe_names != null)
+					for (uint mcgIdx_1 = 0; (mcgIdx_1 < names.Length); mcgIdx_1++)
+					{
+						// [fwd] [in] [out] [optional] [Mcg.CodeGen.StructMarshaller] Interop_UNICODE_STRING__System_Security_Principal_Windows____Interop_UNICODE_STRING__System_Security_Principal_Windows names
+						global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.Cleanup__Unsafe(ref unsafe_names[mcgIdx_1]);
+					}
+				global::System.Runtime.InteropServices.ExternalInterop.SafeCoTaskMemFree(unsafe_names);
+			}
+		}
+
+		// Signature, LsaOpenPolicy, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] uint__unsigned int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_LSA_OBJECT_ATTRIBUTES__System_Security_Principal_Windows____Interop_LSA_OBJECT_ATTRIBUTES__System_Security_Principal_Windows, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeLsaPolicyHandle__System_Security_Principal_Windows____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaOpenPolicy")]
+		public static uint LsaOpenPolicy(
+					string systemName, 
+					ref global::Interop_LSA_OBJECT_ATTRIBUTES__System_Security_Principal_Windows attributes, 
+					int accessMask, 
+					out global::Microsoft.Win32.SafeHandles.SafeLsaPolicyHandle__System_Security_Principal_Windows handle)
+		{
+			// Setup
+			ushort* unsafe_systemName = default(ushort*);
+			global::Interop_LSA_OBJECT_ATTRIBUTES__System_Security_Principal_Windows unsafe_attributes;
+			global::System.IntPtr unsafe_handle;
+			uint unsafe___value;
+			// Marshalling
+			fixed (char* pinned_systemName = systemName)
+			{
+				unsafe_systemName = (ushort*)pinned_systemName;
+				unsafe_attributes = attributes;
+				handle = new global::Microsoft.Win32.SafeHandles.SafeLsaPolicyHandle__System_Security_Principal_Windows();
+				unsafe_handle = handle.DangerousGetHandle();
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes.LsaOpenPolicy(
+									unsafe_systemName, 
+									&(unsafe_attributes), 
+									accessMask, 
+									&(unsafe_handle)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									handle, 
+									unsafe_handle
+								);
+				attributes = unsafe_attributes;
+			}
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, LsaClose, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaClose")]
+		public static int LsaClose(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes.LsaClose(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+
+		// Signature, LsaFreeMemory, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Security.Principal.Windows, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "LsaFreeMemory")]
+		public static int LsaFreeMemory(global::System.IntPtr handle)
+		{
+			// Setup
+			int unsafe___value;
+			// Marshalling
+			// Call to native method
+			unsafe___value = global::__Interop.api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes.LsaFreeMemory(handle);
+			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			// Return
+			return unsafe___value;
+		}
+	}
+
+	/// <summary>
 	/// P/Invoke class for module 'api-ms-win-core-threadpool-l1-2-0.dll'
 	/// </summary>
 	public unsafe static partial class api_ms_win_core_threadpool_l1_2_0_dll
 	{
 		// Signature, CreateThreadpoolIo, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeThreadPoolIOHandle__System_Threading_Overlapped____w64 int, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.PInvokeDelegateMarshaller] Interop_NativeIoCompletionCallback__System_Threading_Overlapped____Interop_NativeIoCompletionCallback__System_Threading_Overlapped, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CreateThreadpoolIo")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CreateThreadpoolIo")]
 		public static global::Microsoft.Win32.SafeHandles.SafeThreadPoolIOHandle__System_Threading_Overlapped CreateThreadpoolIo(
 					global::System.Runtime.InteropServices.SafeHandle fl, 
 					global::Interop_NativeIoCompletionCallback__System_Threading_Overlapped pfnio, 
@@ -1043,7 +3926,7 @@ namespace __Interop
 				// Marshalling
 				fl.DangerousAddRef(ref addRefed);
 				unsafe_pfnio = (void*)global::System.Runtime.InteropServices.McgMarshal.GetStubForPInvokeDelegate(
-									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("Interop+NativeIoCompletionCallback,System.Threading.Overlapped, Version=4.0.1.0, Culture=neutral, PublicKeyToken" +
+									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("Interop+NativeIoCompletionCallback,System.Threading.Overlapped, Version=4.0.2.0, Culture=neutral, PublicKeyToken" +
 											"=b03f5f7f11d50a3a"), 
 									pfnio
 								);
@@ -1075,7 +3958,7 @@ namespace __Interop
 
 		// Signature, CloseThreadpoolIo, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CloseThreadpoolIo")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CloseThreadpoolIo")]
 		public static void CloseThreadpoolIo(global::System.IntPtr pio)
 		{
 			// Marshalling
@@ -1087,7 +3970,7 @@ namespace __Interop
 
 		// Signature, StartThreadpoolIo, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeThreadPoolIOHandle__System_Threading_Overlapped____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "StartThreadpoolIo")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "StartThreadpoolIo")]
 		public static void StartThreadpoolIo(global::Microsoft.Win32.SafeHandles.SafeThreadPoolIOHandle__System_Threading_Overlapped pio)
 		{
 			// Setup
@@ -1104,7 +3987,7 @@ namespace __Interop
 
 		// Signature, CancelThreadpoolIo, [fwd] [return] [Mcg.CodeGen.VoidReturnMarshaller] void__void, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeThreadPoolIOHandle__System_Threading_Overlapped____w64 int, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CancelThreadpoolIo")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Threading.Overlapped, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CancelThreadpoolIo")]
 		public static void CancelThreadpoolIo(global::Microsoft.Win32.SafeHandles.SafeThreadPoolIOHandle__System_Threading_Overlapped pio)
 		{
 			// Setup
@@ -1121,35 +4004,59 @@ namespace __Interop
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-handle-l1-1-0.dll'
+	/// P/Invoke class for module 'api-ms-win-core-file-l1-2-0.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_handle_l1_1_0_dll
+	public unsafe static partial class api_ms_win_core_file_l1_2_0_dll
 	{
-		// Signature, CloseHandle, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_IntPtr____w64 int, 
+		// Signature, CreateFile2, [fwd] [return] [Mcg.CodeGen.Win32HandleMarshaller] Microsoft_Win32_SafeHandles_SafeFileHandle__System_IO_FileSystem____w64 int, [fwd] [in] [Mcg.CodeGen.UnicodeStringMarshaller] string__wchar_t *, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_IO_FileShare__System_IO_FileSystem_Primitives__FileShare__System_IO_FileSystem_Primitives, [fwd] [in] [Mcg.CodeGen.EnumMarshaller] System_IO_FileMode__System_IO_FileSystem_Primitives__FileMode__System_IO_FileSystem_Primitives, [fwd] [in] [managedbyref] [nativebyref] [Mcg.CodeGen.BlittableStructMarshaller] Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem____Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CloseHandle")]
-		public static bool CloseHandle(global::System.IntPtr handle)
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CreateFile2")]
+		public static global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem CreateFile2(
+					string lpFileName, 
+					int dwDesiredAccess, 
+					global::System.IO.FileShare__System_IO_FileSystem_Primitives dwShareMode, 
+					global::System.IO.FileMode__System_IO_FileSystem_Primitives dwCreationDisposition, 
+					ref global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem parameters)
 		{
 			// Setup
-			int unsafe___value;
+			ushort* unsafe_lpFileName = default(ushort*);
+			global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem unsafe_parameters;
+			global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem __value;
+			global::System.IntPtr unsafe___value;
 			// Marshalling
-			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_handle_l1_1_0_dll_PInvokes.CloseHandle(handle);
-			global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
-			global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+			fixed (char* pinned_lpFileName = lpFileName)
+			{
+				unsafe_lpFileName = (ushort*)pinned_lpFileName;
+				unsafe_parameters = parameters;
+				__value = new global::Microsoft.Win32.SafeHandles.SafeFileHandle__System_IO_FileSystem();
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_file_l1_2_0_dll_PInvokes.CreateFile2(
+									unsafe_lpFileName, 
+									dwDesiredAccess, 
+									dwShareMode, 
+									dwCreationDisposition, 
+									&(unsafe_parameters)
+								);
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				global::System.Runtime.InteropServices.McgMarshal.SaveLastWin32Error();
+				global::System.Runtime.InteropServices.McgMarshal.InitializeHandle(
+									__value, 
+									unsafe___value
+								);
+			}
 			// Return
-			return unsafe___value != 0;
+			return __value;
 		}
 	}
 
 	/// <summary>
-	/// P/Invoke class for module 'api-ms-win-core-io-l1-1-1.dll'
+	/// P/Invoke class for module 'api-ms-win-core-io-l1-1-0.dll'
 	/// </summary>
-	public unsafe static partial class api_ms_win_core_io_l1_1_1_dll
+	public unsafe static partial class api_ms_win_core_io_l1_1_0_dll
 	{
 		// Signature, CancelIoEx, [fwd] [return] [Mcg.CodeGen.Win32BoolMarshaller] bool__System.Boolean, [fwd] [in] [Mcg.CodeGen.Win32HandleMarshaller] System_Runtime_InteropServices_SafeHandle____w64 int, [fwd] [in] [Mcg.CodeGen.BlittableValueMarshaller] System_Threading_NativeOverlapped__System_Threading_Overlapped___ptrSystem_Threading__NativeOverlapped__System_Threading_Overlapped *, 
 		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
-		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CancelIoEx")]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", "Interop+mincore", "CancelIoEx")]
 		public static bool CancelIoEx(
 					global::System.Runtime.InteropServices.SafeHandle handle, 
 					global::System.Threading.NativeOverlapped__System_Threading_Overlapped* lpOverlapped)
@@ -1160,7 +4067,7 @@ namespace __Interop
 			// Marshalling
 			handle.DangerousAddRef(ref addRefed);
 			// Call to native method
-			unsafe___value = global::__Interop.api_ms_win_core_io_l1_1_1_dll_PInvokes.CancelIoEx(
+			unsafe___value = global::__Interop.api_ms_win_core_io_l1_1_0_dll_PInvokes.CancelIoEx(
 								handle.DangerousGetHandle(), 
 								((global::System.Threading.NativeOverlapped__System_Threading_Overlapped*)lpOverlapped)
 							);
@@ -1170,6 +4077,662 @@ namespace __Interop
 				handle.DangerousRelease();
 			// Return
 			return unsafe___value != 0;
+		}
+	}
+
+	/// <summary>
+	/// P/Invoke class for module 'api-ms-win-core-winrt-robuffer-l1-1-0.dll'
+	/// </summary>
+	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll
+	{
+		// Signature, RoGetBufferMarshaler, [fwd] [return] [Mcg.CodeGen.BlittableValueMarshaller] int__int, [fwd] [out] [managedbyref] [nativebyref] [Mcg.CodeGen.ComInterfaceMarshaller] System_Runtime_InteropServices_IMarshal__System_Runtime_WindowsRuntime__System_Runtime_InteropServices__IMarshal__System_Runtime_WindowsRuntime *, 
+		[global::System.Runtime.InteropServices.McgGeneratedMarshallingCode]
+		[global::System.Runtime.InteropServices.McgPInvokeMarshalStub("System.Runtime.WindowsRuntime, Version=4.0.12.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", "Interop+mincore", "RoGetBufferMarshaler")]
+		public static int RoGetBufferMarshaler(out global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime bufferMarshalerPtr)
+		{
+			// Setup
+			void* unsafe_bufferMarshalerPtr = default(void*);
+			int unsafe___value;
+			try
+			{
+				// Marshalling
+				unsafe_bufferMarshalerPtr = null;
+				// Call to native method
+				unsafe___value = global::__Interop.api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes.RoGetBufferMarshaler(&(unsafe_bufferMarshalerPtr));
+				global::System.Runtime.InteropServices.DebugAnnotations.PreviousCallContainsUserCode();
+				bufferMarshalerPtr = (global::System.Runtime.InteropServices.IMarshal__System_Runtime_WindowsRuntime)global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject(
+									((global::System.IntPtr)unsafe_bufferMarshalerPtr), 
+									global::System.Runtime.InteropServices.TypeOfHelper.RuntimeTypeHandleOf("System.Runtime.InteropServices.IMarshal,System.Runtime.WindowsRuntime, Version=4.0.12.0, Culture=neutral, Public" +
+											"KeyToken=b77a5c561934e089")
+								);
+				// Return
+				return unsafe___value;
+			}
+			finally
+			{
+				// Cleanup
+				global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_bufferMarshalerPtr)));
+			}
+		}
+	}
+
+	public unsafe static partial class bcrypt_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptCloseAlgorithmProvider(
+					global::System.IntPtr hAlgorithm, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptCreateHash(
+					global::System.IntPtr hAlgorithm, 
+					global::System.IntPtr* phHash, 
+					global::System.IntPtr pbHashObject, 
+					uint cbHashObject, 
+					byte* pbSecret, 
+					uint cbSecret, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptDecrypt(
+					global::System.IntPtr hKey, 
+					byte* pbInput, 
+					uint cbInput, 
+					void* pPaddingInfo, 
+					byte* pbIV, 
+					uint cbIV, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					uint* pcbResult, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptDeriveKeyPBKDF2(
+					global::System.IntPtr hPrf, 
+					byte* pbPassword, 
+					uint cbPassword, 
+					byte* pbSalt, 
+					uint cbSalt, 
+					ulong cIterations, 
+					byte* pbDerivedKey, 
+					uint cbDerivedKey, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptDestroyHash(global::System.IntPtr hHash);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptDestroyKey(global::System.IntPtr hKey);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptDuplicateHash(
+					global::System.IntPtr hHash, 
+					global::System.IntPtr* phNewHash, 
+					global::System.IntPtr pbHashObject, 
+					uint cbHashObject, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptEncrypt(
+					global::System.IntPtr hKey, 
+					byte* pbInput, 
+					uint cbInput, 
+					void* pPaddingInfo, 
+					byte* pbIV, 
+					uint cbIV, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					uint* pcbResult, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptEncryptFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptFinishHash(
+					global::System.IntPtr hHash, 
+					byte* pbOutput, 
+					uint cbOutput, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptGenerateSymmetricKey(
+					global::System.IntPtr hAlgorithm, 
+					global::System.IntPtr* phKey, 
+					global::System.IntPtr pbKeyObject, 
+					uint cbKeyObject, 
+					byte* pbSecret, 
+					uint cbSecret, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptGenRandom(
+					global::System.IntPtr hAlgorithm, 
+					byte* pbBuffer, 
+					uint cbBuffer, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptGenRandomFlags__Microsoft_AspNetCore_Cryptography_Internal dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptGetProperty(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					void* pbOutput, 
+					uint cbOutput, 
+					uint* pcbResult, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptHashData(
+					global::System.IntPtr hHash, 
+					byte* pbInput, 
+					uint cbInput, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptKeyDerivation(
+					global::System.IntPtr hKey, 
+					global::Microsoft.AspNetCore.Cryptography.Cng.BCryptBufferDesc__Microsoft_AspNetCore_Cryptography_Internal* pParameterList, 
+					byte* pbDerivedKey, 
+					uint cbDerivedKey, 
+					uint* pcbResult, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptOpenAlgorithmProvider(
+					global::System.IntPtr* phAlgorithm, 
+					ushort* pszAlgId, 
+					ushort* pszImplementation, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int BCryptSetProperty(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					void* pbInput, 
+					uint cbInput, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptFinishHash", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptFinishHash__0(
+					global::System.IntPtr hHash, 
+					byte* pbOutput, 
+					int cbOutput, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptCreateHash", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptCreateHash__0(
+					global::System.IntPtr hAlgorithm, 
+					global::System.IntPtr* phHash, 
+					global::System.IntPtr pbHashObject, 
+					int cbHashObject, 
+					byte* pbSecret, 
+					int cbSecret, 
+					global::Interop_BCrypt_BCryptCreateHashFlags__System_Security_Cryptography_Algorithms dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptGetProperty", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptGetProperty__0(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					void* pbOutput, 
+					int cbOutput, 
+					int* pcbResult, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptHashData", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptHashData__0(
+					global::System.IntPtr hHash, 
+					byte* pbInput, 
+					int cbInput, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptGenRandom", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptGenRandom__0(
+					global::System.IntPtr hAlgorithm, 
+					byte* pbBuffer, 
+					int cbBuffer, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptOpenAlgorithmProvider", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptOpenAlgorithmProvider__0(
+					global::System.IntPtr* phAlgorithm, 
+					ushort* pszAlgId, 
+					ushort* pszImplementation, 
+					global::Interop_BCrypt_BCryptOpenAlgorithmProviderFlags__System_Security_Cryptography_Algorithms dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptDestroyHash", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptDestroyHash__0(global::System.IntPtr hHash);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptImportKey(
+					global::System.IntPtr hAlgorithm, 
+					global::System.IntPtr hImportKey, 
+					ushort* pszBlobType, 
+					global::System.IntPtr* hKey, 
+					global::System.IntPtr pbKeyObject, 
+					int cbKeyObject, 
+					byte* pbInput, 
+					int cbInput, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptCloseAlgorithmProvider", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms BCryptCloseAlgorithmProvider__0(
+					global::System.IntPtr hAlgorithm, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptCloseAlgorithmProvider", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static uint BCryptCloseAlgorithmProvider__1(
+					global::System.IntPtr hAlgorithm, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptDestroyKey", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static uint BCryptDestroyKey__0(global::System.IntPtr hKey);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptOpenAlgorithmProvider", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptOpenAlgorithmProvider__1(
+					global::System.IntPtr* phAlgorithm, 
+					ushort* pszAlgId, 
+					ushort* pszImplementation, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptSetProperty", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptSetProperty__0(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					ushort* pbInput, 
+					int cbInput, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptEncrypt", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptEncrypt__0(
+					global::System.IntPtr hKey, 
+					byte* pbInput, 
+					int cbInput, 
+					global::System.IntPtr paddingInfo, 
+					byte* pbIV, 
+					int cbIV, 
+					byte* pbOutput, 
+					int cbOutput, 
+					int* cbResult, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("bcrypt.dll", EntryPoint="BCryptDecrypt", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Internal.NativeCrypto.Cng_NTSTATUS__System_Security_Cryptography_Algorithms BCryptDecrypt__0(
+					global::System.IntPtr hKey, 
+					byte* pbInput, 
+					int cbInput, 
+					global::System.IntPtr paddingInfo, 
+					byte* pbIV, 
+					int cbIV, 
+					byte* pbOutput, 
+					int cbOutput, 
+					int* cbResult, 
+					int dwFlags);
+	}
+
+	public unsafe static partial class crypt32_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptProtectData(
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataIn, 
+					global::System.IntPtr szDataDescr, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pOptionalEntropy, 
+					global::System.IntPtr pvReserved, 
+					global::System.IntPtr pPromptStruct, 
+					uint dwFlags, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataOut);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptProtectMemory(
+					global::System.IntPtr pData, 
+					uint cbData, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptUnprotectData(
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataIn, 
+					global::System.IntPtr ppszDataDescr, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pOptionalEntropy, 
+					global::System.IntPtr pvReserved, 
+					global::System.IntPtr pPromptStruct, 
+					uint dwFlags, 
+					global::Microsoft.AspNetCore.Cryptography.DATA_BLOB__Microsoft_AspNetCore_Cryptography_Internal* pDataOut);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptUnprotectMemory(
+					byte* pData, 
+					uint cbData, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", EntryPoint="CryptUnprotectMemory", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptUnprotectMemory__0(
+					global::System.IntPtr pData, 
+					uint cbData, 
+					uint dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr CryptFindOIDInfo(
+					global::Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_Encoding dwKeyType, 
+					global::System.IntPtr pvKey, 
+					global::System.Security.Cryptography.OidGroup__System_Security_Cryptography_Encoding group);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptFormatObject(
+					int dwCertEncodingType, 
+					int dwFormatType, 
+					int dwFormatStrType, 
+					global::System.IntPtr pFormatStruct, 
+					byte* lpszStructType, 
+					byte* pbEncoded, 
+					int cbEncoded, 
+					ushort* pbFormat, 
+					int* pcbFormat);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", EntryPoint="CryptFindOIDInfo", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr CryptFindOIDInfo__0(
+					global::Interop_Crypt32_CryptOidInfoKeyType__System_Security_Cryptography_X509Certificates dwKeyType, 
+					global::System.IntPtr pvKey, 
+					global::System.Security.Cryptography.OidGroup__System_Security_Cryptography_Encoding group);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CryptDecodeObject(
+					global::Internal.Cryptography.Pal.Native.CertEncodingType__System_Security_Cryptography_X509Certificates dwCertEncodingType, 
+					global::System.IntPtr lpszStructType, 
+					byte* pbEncoded, 
+					int cbEncoded, 
+					global::Internal.Cryptography.Pal.Native.CryptDecodeObjectFlags__System_Security_Cryptography_X509Certificates dwFlags, 
+					byte* pvStructInfo, 
+					int* pcbStructInfo);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("crypt32.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CertFreeCertificateContext(global::System.IntPtr pCertContext);
+	}
+
+	public unsafe static partial class ncrypt_dll_PInvokes
+	{
+		public static int NCryptCloseProtectionDescriptor(global::System.IntPtr hDescriptor)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptCloseProtectionDescriptor!ncrypt.dll\' from this method. Please look for this m" +
+					"ethod in build warnings for more details. ");
+		}
+
+		public static int NCryptCreateProtectionDescriptor(
+					ushort* pwszDescriptorString, 
+					uint dwFlags, 
+					global::System.IntPtr* phDescriptor)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptCreateProtectionDescriptor!ncrypt.dll\' from this method. Please look for this " +
+					"method in build warnings for more details. ");
+		}
+
+		public static int NCryptGetProtectionDescriptorInfo(
+					global::System.IntPtr hDescriptor, 
+					global::System.IntPtr pMemPara, 
+					uint dwInfoType, 
+					global::System.IntPtr* ppvInfo)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptGetProtectionDescriptorInfo!ncrypt.dll\' from this method. Please look for this" +
+					" method in build warnings for more details. ");
+		}
+
+		public static int NCryptProtectSecret(
+					global::System.IntPtr hDescriptor, 
+					uint dwFlags, 
+					byte* pbData, 
+					uint cbData, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					global::System.IntPtr* ppbProtectedBlob, 
+					uint* pcbProtectedBlob)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptProtectSecret!ncrypt.dll\' from this method. Please look for this method in bui" +
+					"ld warnings for more details. ");
+		}
+
+		public static int NCryptUnprotectSecret(
+					global::System.IntPtr phDescriptor, 
+					uint dwFlags, 
+					byte* pbProtectedBlob, 
+					uint cbProtectedBlob, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					global::System.IntPtr* ppbData, 
+					uint* pcbData)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptUnprotectSecret!ncrypt.dll\' from this method. Please look for this method in b" +
+					"uild warnings for more details. ");
+		}
+
+		public static int NCryptUnprotectSecret__0(
+					global::System.IntPtr* phDescriptor, 
+					uint dwFlags, 
+					byte* pbProtectedBlob, 
+					uint cbProtectedBlob, 
+					global::System.IntPtr pMemPara, 
+					global::System.IntPtr hWnd, 
+					global::System.IntPtr* ppbData, 
+					uint* pcbData)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'NCryptUnprotectSecret!ncrypt.dll\' from this method. Please look for this method in b" +
+					"uild warnings for more details. ");
+		}
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("ncrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptImportKey(
+					global::System.IntPtr hProvider, 
+					global::System.IntPtr hImportKey, 
+					ushort* pszBlobType, 
+					global::System.IntPtr pParameterList, 
+					global::System.IntPtr* phKey, 
+					byte* pbData, 
+					int cbData, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("ncrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptGetProperty(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					void* pbOutput, 
+					int cbOutput, 
+					int* pcbResult, 
+					global::System.Security.Cryptography.CngPropertyOptions__System_Security_Cryptography_Cng dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("ncrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptOpenStorageProvider(
+					global::System.IntPtr* phProvider, 
+					ushort* pszProviderName, 
+					int dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("ncrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptSetProperty(
+					global::System.IntPtr hObject, 
+					ushort* pszProperty, 
+					void* pbInput, 
+					int cbInput, 
+					global::System.Security.Cryptography.CngPropertyOptions__System_Security_Cryptography_Cng dwFlags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("ncrypt.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::Interop_NCrypt_ErrorCode__System_Security_Cryptography_Cng NCryptFreeObject(global::System.IntPtr hObject);
+	}
+
+	public unsafe static partial class api_ms_win_core_localization_l1_2_0_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage(
+					uint dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					uint dwLanguageId, 
+					global::System.IntPtr* lpBuffer, 
+					uint nSize, 
+					global::System.IntPtr Arguments);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int IsValidLocaleName(ushort* lpLocaleName);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int ResolveLocaleName(
+					ushort* lpNameToResolve, 
+					ushort* lpLocaleName, 
+					int cchLocaleName);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int IdnToUnicode(
+					uint dwFlags, 
+					global::System.IntPtr lpASCIICharStr, 
+					int cchASCIIChar, 
+					global::System.IntPtr lpUnicodeCharStr, 
+					int cchUnicodeChar);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetCPInfoExW(
+					uint CodePage, 
+					uint dwFlags, 
+					global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages* lpCPInfoEx);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int IdnToAscii(
+					uint dwFlags, 
+					global::System.IntPtr lpUnicodeCharStr, 
+					int cchUnicodeChar, 
+					global::System.IntPtr lpASCIICharStr, 
+					int cchASCIIChar);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage__0(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage__1(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage__2(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage__3(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-0.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FormatMessage__4(
+					int dwFlags, 
+					global::System.IntPtr lpSource, 
+					uint dwMessageId, 
+					int dwLanguageId, 
+					ushort* lpBuffer, 
+					int nSize, 
+					global::System.IntPtr* arguments);
+	}
+
+	public unsafe static partial class api_ms_win_core_libraryloader_l1_2_0_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-libraryloader-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FreeLibrary(global::System.IntPtr hModule);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-libraryloader-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr GetProcAddress(
+					global::System.IntPtr hModule, 
+					byte* lpProcName);
+	}
+
+	public unsafe static partial class api_ms_win_core_libraryloader_l1_1_0_dll_PInvokes
+	{
+		public static int GetModuleHandleEx(
+					uint dwFlags, 
+					global::System.IntPtr lpModuleName, 
+					global::System.IntPtr* phModule)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'GetModuleHandleEx!api-ms-win-core-libraryloader-l1-1-0.dll\' from this method. Please" +
+					" look for this method in build warnings for more details. ");
+		}
+
+		public static global::System.IntPtr LoadLibraryEx(
+					ushort* lpFileName, 
+					global::System.IntPtr hFile, 
+					uint dwFlags)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LoadLibraryEx!api-ms-win-core-libraryloader-l1-1-0.dll\' from this method. Please loo" +
+					"k for this method in build warnings for more details. ");
 		}
 	}
 
@@ -1219,10 +4782,10 @@ namespace __Interop
 					global::System.IntPtr* commonStub);
 	}
 
-	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_1_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_errorhandling_l1_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-errorhandling-l1-1-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-errorhandling-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int GetLastError();
 	}
 
@@ -1233,59 +4796,33 @@ namespace __Interop
 		public extern static int RoInitialize(uint initType);
 	}
 
-	public unsafe static partial class api_ms_win_core_localization_l1_2_1_dll_PInvokes
+	public unsafe static partial class api_ms_win_security_base_l1_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int IsValidLocaleName(ushort* lpLocaleName);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-security-base-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int RevertToSelf();
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int ResolveLocaleName(
-					ushort* lpNameToResolve, 
-					ushort* lpLocaleName, 
-					int cchLocaleName);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-security-base-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int ImpersonateLoggedOnUser(global::System.IntPtr userToken);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int GetCPInfoExW(
-					uint CodePage, 
-					uint dwFlags, 
-					global::Interop_mincore_CPINFOEXW__System_Text_Encoding_CodePages* lpCPInfoEx);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-security-base-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetTokenInformation(
+					global::System.IntPtr TokenHandle, 
+					uint TokenInformationClass, 
+					global::System.IntPtr TokenInformation, 
+					uint TokenInformationLength, 
+					uint* ReturnLength);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int FormatMessage(
-					int dwFlags, 
-					global::System.IntPtr lpSource, 
-					uint dwMessageId, 
-					int dwLanguageId, 
-					ushort* lpBuffer, 
-					int nSize, 
-					global::System.IntPtr* arguments);
-
-		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-localization-l1-2-1.dll", EntryPoint="FormatMessageW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int FormatMessage__0(
-					int dwFlags, 
-					global::System.IntPtr lpSource, 
-					uint dwMessageId, 
-					int dwLanguageId, 
-					ushort* lpBuffer, 
-					int nSize, 
-					global::System.IntPtr* arguments);
-	}
-
-	public unsafe static partial class api_ms_win_core_com_l1_1_0_dll_PInvokes
-	{
-		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-com-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int CoCreateInstance(
-					byte* rclsid, 
-					global::System.IntPtr pUnkOuter, 
-					int dwClsContext, 
-					byte* riid, 
-					global::System.IntPtr* ppv);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-security-base-l1-1-0.dll", EntryPoint="GetTokenInformation", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetTokenInformation__0(
+					global::System.IntPtr TokenHandle, 
+					uint TokenInformationClass, 
+					global::System.IntPtr TokenInformation, 
+					uint TokenInformationLength, 
+					uint* ReturnLength);
 	}
 
 	public unsafe static partial class ntdll_dll_PInvokes
@@ -1306,45 +4843,114 @@ namespace __Interop
 					ushort port, 
 					ushort* addressString, 
 					uint* addressStringLength);
+
+		public static int RtlNtStatusToDosError(int status)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'RtlNtStatusToDosError!ntdll.dll\' from this method. Please look for this method in bu" +
+					"ild warnings for more details. ");
+		}
 	}
 
-	public unsafe static partial class oleaut32_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_heap_l2_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("oleaut32.dll", EntryPoint="#6", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static void SysFreeString(global::System.IntPtr bstr);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-heap-l2-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr LocalAlloc(
+					int uFlags, 
+					global::System.UIntPtr sizetdwBytes);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-heap-l2-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr LocalFree(global::System.IntPtr handle);
 	}
 
-	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_handle_l1_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-winrt-robuffer-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.StdCall)]
-		public extern static int RoGetBufferMarshaler(void** bufferMarshalerPtr);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-handle-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CloseHandle(global::System.IntPtr handle);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-handle-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int DuplicateHandle(
+					global::System.IntPtr hSourceProcessHandle, 
+					global::System.IntPtr hSourceHandle, 
+					global::System.IntPtr hTargetProcessHandle, 
+					global::System.IntPtr* lpTargetHandle, 
+					uint dwDesiredAccess, 
+					int bInheritHandle, 
+					uint dwOptions);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-handle-l1-1-0.dll", EntryPoint="CloseHandle", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CloseHandle__0(global::System.IntPtr handle);
 	}
 
-	public unsafe static partial class api_ms_win_core_file_l1_2_1_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_processthreads_l1_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int GetFileType(global::System.IntPtr hFile);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-processthreads-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr GetCurrentThread();
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int SetFilePointerEx(
-					global::System.IntPtr hFile, 
-					long liDistanceToMove, 
-					long* lpNewFilePointer, 
-					uint dwMoveMethod);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-processthreads-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int OpenThreadToken(
+					global::System.IntPtr ThreadHandle, 
+					global::System.Security.Principal.TokenAccessLevels__System_Security_Principal_Windows dwDesiredAccess, 
+					int bOpenAsSelf, 
+					global::System.IntPtr* phThreadToken);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", EntryPoint="GetFileAttributesExW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int GetFileAttributesExPrivate(
-					ushort* name, 
-					global::Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem fileInfoLevel, 
-					global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem* lpFileInformation);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-processthreads-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr GetCurrentProcess();
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", EntryPoint="FindFirstFileExW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-processthreads-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int OpenProcessToken(
+					global::System.IntPtr ProcessToken, 
+					global::System.Security.Principal.TokenAccessLevels__System_Security_Principal_Windows DesiredAccess, 
+					global::System.IntPtr* TokenHandle);
+	}
+
+	public unsafe static partial class sspicli_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("sspicli.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int LsaGetLogonSessionData(
+					global::Interop_LUID__System_Security_Principal_Windows* LogonId, 
+					global::System.IntPtr* ppLogonSessionData);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("sspicli.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int LsaFreeReturnBuffer(global::System.IntPtr handle);
+	}
+
+	public unsafe static partial class api_ms_win_core_com_l1_1_0_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-com-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CoCreateInstance(
+					byte* rclsid, 
+					global::System.IntPtr pUnkOuter, 
+					int dwClsContext, 
+					byte* riid, 
+					global::System.IntPtr* ppv);
+	}
+
+	public unsafe static partial class api_ms_win_core_file_l1_1_0_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="CreateDirectoryW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int CreateDirectoryPrivate(
+					ushort* path, 
+					global::Interop_mincore_SECURITY_ATTRIBUTES__System_IO_FileSystem* lpSecurityAttributes);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="DeleteFileW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int DeleteFilePrivate(ushort* path);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="FindFirstFileExW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static global::System.IntPtr FindFirstFileExPrivate(
 					ushort* lpFileName, 
 					global::Interop_mincore_FINDEX_INFO_LEVELS__System_IO_FileSystem fInfoLevelId, 
@@ -1354,24 +4960,40 @@ namespace __Interop
 					int dwAdditionalFlags);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int SetEndOfFile(global::System.IntPtr hFile);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="GetFileAttributesExW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetFileAttributesExPrivate(
+					ushort* name, 
+					global::Interop_mincore_GET_FILEEX_INFO_LEVELS__System_IO_FileSystem fileInfoLevel, 
+					global::Interop_mincore_WIN32_FILE_ATTRIBUTE_DATA__System_IO_FileSystem* lpFileInformation);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static global::System.IntPtr CreateFile2(
-					ushort* lpFileName, 
-					int dwDesiredAccess, 
-					global::System.IO.FileShare__System_IO_FileSystem_Primitives dwShareMode, 
-					global::System.IO.FileMode__System_IO_FileSystem_Primitives dwCreationDisposition, 
-					global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem* parameters);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int GetFileType(global::System.IntPtr hFile);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="FindNextFileW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int FindNextFile(
+					global::System.IntPtr hndFindFile, 
+					global::Interop_mincore_WIN32_FIND_DATA__System_IO_FileSystem__Impl.UnsafeType* lpFindFileData);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int SetFilePointerEx(
+					global::System.IntPtr hFile, 
+					long liDistanceToMove, 
+					long* lpNewFilePointer, 
+					uint dwMoveMethod);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int FindClose(global::System.IntPtr hFindFile);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int SetEndOfFile(global::System.IntPtr hFile);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int ReadFile(
 					global::System.IntPtr handle, 
 					byte* bytes, 
@@ -1380,7 +5002,7 @@ namespace __Interop
 					global::System.Threading.NativeOverlapped__System_Threading_Overlapped* overlapped);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", EntryPoint="ReadFile", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="ReadFile", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int ReadFile__0(
 					global::System.IntPtr handle, 
 					byte* bytes, 
@@ -1389,7 +5011,7 @@ namespace __Interop
 					global::System.IntPtr mustBeZero);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int WriteFile(
 					global::System.IntPtr handle, 
 					byte* bytes, 
@@ -1398,7 +5020,7 @@ namespace __Interop
 					global::System.Threading.NativeOverlapped__System_Threading_Overlapped* lpOverlapped);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", EntryPoint="WriteFile", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", EntryPoint="WriteFile", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int WriteFile__0(
 					global::System.IntPtr handle, 
 					byte* bytes, 
@@ -1407,19 +5029,81 @@ namespace __Interop
 					global::System.IntPtr mustBeZero);
 
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int FlushFileBuffers(global::System.IntPtr hHandle);
 	}
 
-	public unsafe static partial class api_ms_win_core_file_l2_1_1_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_file_l2_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l2-1-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l2-1-0.dll", EntryPoint="MoveFileExW", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static int MoveFileExPrivate(
+					ushort* src, 
+					ushort* dst, 
+					uint flags);
+
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l2-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int GetFileInformationByHandleEx(
 					global::System.IntPtr hFile, 
 					global::Interop_mincore_FILE_INFO_BY_HANDLE_CLASS__System_IO_FileSystem FileInformationClass, 
 					global::Interop_mincore_FILE_STANDARD_INFO__System_IO_FileSystem* lpFileInformation, 
 					uint dwBufferSize);
+	}
+
+	public unsafe static partial class oleaut32_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("oleaut32.dll", EntryPoint="#6", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static void SysFreeString(global::System.IntPtr bstr);
+	}
+
+	public unsafe static partial class api_ms_win_security_lsapolicy_l1_1_0_dll_PInvokes
+	{
+		public static uint LsaLookupSids(
+					global::System.IntPtr handle, 
+					int count, 
+					global::System.IntPtr* sids, 
+					global::System.IntPtr* referencedDomains, 
+					global::System.IntPtr* names)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LsaLookupSids!api-ms-win-security-lsapolicy-l1-1-0.dll\' from this method. Please loo" +
+					"k for this method in build warnings for more details. ");
+		}
+
+		public static uint LsaLookupNames2(
+					global::System.IntPtr handle, 
+					int flags, 
+					int count, 
+					global::Interop_UNICODE_STRING__System_Security_Principal_Windows__Impl.UnsafeType* names, 
+					global::System.IntPtr* referencedDomains, 
+					global::System.IntPtr* sids)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LsaLookupNames2!api-ms-win-security-lsapolicy-l1-1-0.dll\' from this method. Please l" +
+					"ook for this method in build warnings for more details. ");
+		}
+
+		public static uint LsaOpenPolicy(
+					ushort* systemName, 
+					global::Interop_LSA_OBJECT_ATTRIBUTES__System_Security_Principal_Windows* attributes, 
+					int accessMask, 
+					global::System.IntPtr* handle)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LsaOpenPolicy!api-ms-win-security-lsapolicy-l1-1-0.dll\' from this method. Please loo" +
+					"k for this method in build warnings for more details. ");
+		}
+
+		public static int LsaClose(global::System.IntPtr handle)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LsaClose!api-ms-win-security-lsapolicy-l1-1-0.dll\' from this method. Please look for" +
+					" this method in build warnings for more details. ");
+		}
+
+		public static int LsaFreeMemory(global::System.IntPtr handle)
+		{
+			throw new global::System.TypeLoadException("Unresolved P/Invoke method \'LsaFreeMemory!api-ms-win-security-lsapolicy-l1-1-0.dll\' from this method. Please loo" +
+					"k for this method in build warnings for more details. ");
+		}
 	}
 
 	public unsafe static partial class api_ms_win_core_threadpool_l1_2_0_dll_PInvokes
@@ -1445,20 +5129,32 @@ namespace __Interop
 		public extern static void CancelThreadpoolIo(global::System.IntPtr pio);
 	}
 
-	public unsafe static partial class api_ms_win_core_handle_l1_1_0_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_file_l1_2_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-handle-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
-		public extern static int CloseHandle(global::System.IntPtr handle);
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-file-l1-2-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		public extern static global::System.IntPtr CreateFile2(
+					ushort* lpFileName, 
+					int dwDesiredAccess, 
+					global::System.IO.FileShare__System_IO_FileSystem_Primitives dwShareMode, 
+					global::System.IO.FileMode__System_IO_FileSystem_Primitives dwCreationDisposition, 
+					global::Interop_mincore_CREATEFILE2_EXTENDED_PARAMETERS__System_IO_FileSystem* parameters);
 	}
 
-	public unsafe static partial class api_ms_win_core_io_l1_1_1_dll_PInvokes
+	public unsafe static partial class api_ms_win_core_io_l1_1_0_dll_PInvokes
 	{
 		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
-		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-io-l1-1-1.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-io-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.Winapi)]
 		public extern static int CancelIoEx(
 					global::System.IntPtr handle, 
 					global::System.Threading.NativeOverlapped__System_Threading_Overlapped* lpOverlapped);
+	}
+
+	public unsafe static partial class api_ms_win_core_winrt_robuffer_l1_1_0_dll_PInvokes
+	{
+		[global::System.Runtime.InteropServices.McgGeneratedNativeCallCode]
+		[global::System.Runtime.InteropServices.DllImport("api-ms-win-core-winrt-robuffer-l1-1-0.dll", CallingConvention=global::System.Runtime.InteropServices.CallingConvention.StdCall)]
+		public extern static int RoGetBufferMarshaler(void** bufferMarshalerPtr);
 	}
 }
 

@@ -1,1 +1,1 @@
-C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands.csproj;x64
+C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands.csproj;x64

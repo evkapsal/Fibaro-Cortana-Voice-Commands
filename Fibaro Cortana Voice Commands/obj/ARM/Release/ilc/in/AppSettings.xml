@@ -8,7 +8,7 @@
   Passwors = your Password
   id = fibaro device id
   -->
-  <Host key="home" name="192.168.1.xxx" username="username" password="password" />
+  <Host key="home" name="192.168.1.230" username="apiuser" password="!Apiuser!2" />
   <Host key="main" id="7" />
   <Host key="dinning" id="27" />
   <Host key="hallway" id="178" />

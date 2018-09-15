@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Fibaro-Cortana-Voice-Commands" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Language>EN-US</Language>
+			<Scale>200</Scale>
+			<TargetSize>256,16,24,32,48</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="AppSettingsWindow.xbf" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/AppSettingsWindow.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CustomVoiceCommandDefinitions.xml" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/CustomVoiceCommandDefinitions.xml">
+				<Candidate type="Path">
+					<Value>CustomVoiceCommandDefinitions.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Fibaro Cortana Voice Commands.xr.xml" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Fibaro Cortana Voice Commands.xr.xml">
+				<Candidate type="Path">
+					<Value>Fibaro Cortana Voice Commands.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/MainPage.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="cortana.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/cortana.png">
+					<Candidate type="Path">
+						<Value>Assets\cortana.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Cortana2.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Cortana2.png">
+					<Candidate type="Path">
+						<Value>Assets\Cortana2.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="FibaroHome.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/FibaroHome.png">
+					<Candidate type="Path">
+						<Value>Assets\FibaroHome.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="fibaroOposite.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/fibaroOposite.png">
+					<Candidate type="Path">
+						<Value>Assets\fibaroOposite.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash142x142.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash142x142.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash142x142.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash300x300.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash300x300.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash300x300.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash400x400_v2.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash400x400_v2.png">
+					<Candidate type="Path">
+						<Value>Assets\Splash400x400_v2.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash48x48.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash48x48.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash48x48.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash50x50.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash50x50.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash50x50.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash620x300.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash620x300.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash620x300.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Splash620x620.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Splash620x620.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Splash620x620.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-48" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/StoreLogo.png">
+					<Candidate type="Path">
+						<Value>Assets\StoreLogo.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.AspNetCore.Cryptography.Internal.Resources">
+			<NamedResource name="BCryptAlgorithmHandle_ProviderNotFound" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Cryptography.Internal.Resources/BCryptAlgorithmHandle_ProviderNotFound">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A provider could not be found for algorithm '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="BCRYPT_KEY_LENGTHS_STRUCT_InvalidKeyLength" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Cryptography.Internal.Resources/BCRYPT_KEY_LENGTHS_STRUCT_InvalidKeyLength">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The key length {0} is invalid. Valid key lengths are {1} to {2} bits (step size {3}).</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Platform_Windows7Required" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Cryptography.Internal.Resources/Platform_Windows7Required">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>This operation requires Windows 7 / Windows Server 2008 R2 or later.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Platform_Windows8Required" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Cryptography.Internal.Resources/Platform_Windows8Required">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>This operation requires Windows 8 / Windows Server 2012 or later.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.AspNetCore.DataProtection.Abstractions.Resources">
+			<NamedResource name="CryptCommon_GenericError" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Abstractions.Resources/CryptCommon_GenericError">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>An error occurred during a cryptographic operation.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CryptCommon_PayloadInvalid" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Abstractions.Resources/CryptCommon_PayloadInvalid">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The payload was invalid.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DataProtectionExtensions_NoService" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Abstractions.Resources/DataProtectionExtensions_NoService">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>No service for type '{0}' has been registered.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DataProtectionExtensions_NullPurposesCollection" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Abstractions.Resources/DataProtectionExtensions_NullPurposesCollection">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The purposes collection cannot be null or empty and cannot contain null elements.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.AspNetCore.DataProtection.Resources">
+			<NamedResource name="AlgorithmAssert_BadBlockSize" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/AlgorithmAssert_BadBlockSize">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The symmetric algorithm block size of {0} bits is invalid. The block size must be between 64 and 2048 bits, inclusive, and it must be a multiple of 8 bits.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="AlgorithmAssert_BadDigestSize" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/AlgorithmAssert_BadDigestSize">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The validation algorithm digest size of {0} bits is invalid. The digest size must be between 128 and 2048 bits, inclusive, and it must be a multiple of 8 bits.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="AlgorithmAssert_BadKeySize" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/AlgorithmAssert_BadKeySize">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The symmetric algorithm key size of {0} bits is invalid. The key size must be between 128 and 2048 bits, inclusive, and it must be a multiple of 8 bits.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CertificateXmlEncryptor_CertificateNotFound" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/CertificateXmlEncryptor_CertificateNotFound">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A certificate with the thumbprint '{0}' could not be found.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_ArgumentCannotBeNullOrEmpty" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_ArgumentCannotBeNullOrEmpty">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Argument cannot be null or empty.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_BufferIncorrectlySized" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_BufferIncorrectlySized">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The provided buffer is of length {0} byte(s). It must instead be exactly {1} byte(s) in length.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_DecryptionFailed" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_DecryptionFailed">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The provided payload could not be decrypted. Refer to the inner exception for more information.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_EncryptionFailed" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_EncryptionFailed">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>An error occurred while trying to encrypt the provided data. Refer to the inner exception for more information.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_KeyNotFound" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_KeyNotFound">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The key {0:B} was not found in the key ring.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_KeyRevoked" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_KeyRevoked">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The key {0:B} has been revoked.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_PropertyCannotBeNullOrEmpty" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_PropertyCannotBeNullOrEmpty">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Property {0} cannot be null or empty.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_PropertyMustBeNonNegative" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_PropertyMustBeNonNegative">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Property {0} must have a non-negative value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Common_ValueMustBeNonNegative" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Common_ValueMustBeNonNegative">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Value must be non-negative.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CryptCommon_GenericError" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/CryptCommon_GenericError">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>An error occurred during a cryptographic operation.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CryptCommon_PayloadInvalid" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/CryptCommon_PayloadInvalid">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The payload was invalid.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EncryptedXmlDecryptor_DoesNotWorkOnCoreClr" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/EncryptedXmlDecryptor_DoesNotWorkOnCoreClr">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Decrypting EncryptedXml-encapsulated payloads is not yet supported on Core CLR.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="KeyManagementOptions_MinNewKeyLifetimeViolated" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/KeyManagementOptions_MinNewKeyLifetimeViolated">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The new key lifetime must be at least one week.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="KeyRingProvider_NoDefaultKey_AutoGenerateDisabled" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/KeyRingProvider_NoDefaultKey_AutoGenerateDisabled">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The key ring does not contain a valid default protection key. The data protection system cannot create a new key because auto-generation of keys is disabled.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="LifetimeMustNotBeNegative" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/LifetimeMustNotBeNegative">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>{0} must not be negative</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Platform_WindowsRequiredForGcm" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/Platform_WindowsRequiredForGcm">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>GCM algorithms require the Windows platform.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ProtectionProvider_BadMagicHeader" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/ProtectionProvider_BadMagicHeader">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The provided payload cannot be decrypted because it was not protected with this protection provider.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ProtectionProvider_BadVersion" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/ProtectionProvider_BadVersion">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The provided payload cannot be decrypted because it was protected with a newer version of the protection provider.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TypeExtensions_BadCast" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/TypeExtensions_BadCast">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The type '{1}' is not assignable to '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="XmlKeyManager_DuplicateKey" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.DataProtection.Resources/XmlKeyManager_DuplicateKey">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The key {0:B} already exists in the keyring.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.AspNetCore.Http.Abstractions.Resources">
+			<NamedResource name="Exception_InvokeDoesNotSupportRefOrOutParams" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_InvokeDoesNotSupportRefOrOutParams">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The '{0}' method must not have ref or out parameters.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_InvokeMiddlewareNoService" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_InvokeMiddlewareNoService">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Unable to resolve service for type '{0}' while attempting to Invoke middleware '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_PathMustStartWithSlash" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_PathMustStartWithSlash">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The path in '{0}' must start with '/'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_PortMustBeGreaterThanZero" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_PortMustBeGreaterThanZero">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The value must be greater than zero.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_UseMiddleMutlipleInvokes" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_UseMiddleMutlipleInvokes">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Multiple public '{0}' methods are available.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_UseMiddlewareIServiceProviderNotAvailable" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_UseMiddlewareIServiceProviderNotAvailable">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>'{0}' is not available.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_UseMiddlewareNoInvokeMethod" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_UseMiddlewareNoInvokeMethod">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>No public '{0}' method found.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_UseMiddlewareNonTaskReturnType" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_UseMiddlewareNonTaskReturnType">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>'{0}' does not return an object of type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Exception_UseMiddlewareNoParameters" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.AspNetCore.Http.Abstractions.Resources/Exception_UseMiddlewareNoParameters">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The '{0}' method's first argument must be of type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Extensions.DependencyInjection.Abstractions.Resources">
+			<NamedResource name="AmbiguousConstructorMatch" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/AmbiguousConstructorMatch">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Multiple constructors accepting all given argument types have been found in type '{0}'. There should only be one applicable constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotLocateImplementation" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/CannotLocateImplementation">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Unable to locate implementation '{0}' for service '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotResolveService" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/CannotResolveService">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Unable to resolve service for type '{0}' while attempting to activate '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NoConstructorMatch" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/NoConstructorMatch">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>A suitable constructor for type '{0}' could not be located. Ensure the type is concrete and services are registered for all parameters of a public constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NoServiceRegistered" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/NoServiceRegistered">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>No service for type '{0}' has been registered.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TryAddIndistinguishableTypeToEnumerable" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.DependencyInjection.Abstractions.Resources/TryAddIndistinguishableTypeToEnumerable">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Implementation type cannot be '{0}' because it is indistinguishable from other services registered for '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Extensions.Logging.Abstractions.Resource">
+			<NamedResource name="UnexpectedNumberOfNamedParameters" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Logging.Abstractions.Resource/UnexpectedNumberOfNamedParameters">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>The format string '{0}' does not have the expected number of named parameters. Expected {1} parameter(s) but found {2} parameter(s).</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Extensions.Options.Resources">
+			<NamedResource name="Error_CannotActivateAbstractOrInterface" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Options.Resources/Error_CannotActivateAbstractOrInterface">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Cannot create instance of type '{0}' because it is either abstract or an interface.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_FailedBinding" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Options.Resources/Error_FailedBinding">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Failed to convert '{0}' to type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_FailedToActivate" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Options.Resources/Error_FailedToActivate">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Failed to create instance of type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Error_MissingParameterlessConstructor" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Options.Resources/Error_MissingParameterlessConstructor">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Cannot create instance of type '{0}' because it is missing a public parameterless constructor.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="Microsoft.Extensions.Primitives.Resources">
+			<NamedResource name="Argument_InvalidOffsetLength" uri="ms-resource://Fibaro-Cortana-Voice-Commands/Microsoft.Extensions.Primitives.Resources/Argument_InvalidOffsetLength">
+				<Candidate qualifiers="Language-EN-US" isDefault="true" type="String">
+					<Value>Offset and length are out of bounds for the string or length is greater than the number of characters from index to the end of the string.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
