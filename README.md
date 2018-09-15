@@ -21,7 +21,7 @@ Before Application installation you have to install the application certificate 
 **Example of Windows Certificate mmc** [here](https://technet.microsoft.com/en-us/library/dd632619.aspx).
 * On your windows machine -> **Start** -> **Run** -> **mmc**
 * **File** -> **Add Remove Snap In** -> and select **Certificates** -> **Add** -> **Computer Account** -> **Local Computer** -> **Finish** -> **OK**
-* Expand **Trusted Root Certification Authority** -> **Certificated**
+* Expand **Trusted Root Certification Authority** -> **Certificates**
 * Right Click in **Certificates** -> **All tasks** -> **Import**
 * Got through the wizard and select the **Fibaro Cortana Voice Commands_1.0.16.0_x64.cer** 
 * You don't have to enter any password just select import and finish the wizard.
