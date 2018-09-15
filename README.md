@@ -7,6 +7,7 @@ Cortana voice commands for Fibaro HCL/HC2, is a Universal Windows Application ba
 * Lights Dim High/Low  
 
 (Rest API integration with Fibaro HCL/HC2)
+Voice Commands 1.0.18 Release
 
 ## Getting Started
 
