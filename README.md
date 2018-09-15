@@ -16,6 +16,7 @@ Following the instructions below you can install Fibaro Voice Cortana Commands i
 
 Before Application installation you have to install the application certificate in your computer to the trusted root certification authority.
 
+* Enable Windows App [Sideload](https://www.windowscentral.com/how-enable-windows-10-sideload-apps-outside-store) in your Windows 10 Machine.
 * Download [Certificate](https://github.com/evkapsal/Fibaro-Cortana-Voice-Commands/tree/master/Fibaro%20Cortana%20Voice%20Commands/AppPackages/Fibaro%20Cortana%20Voice%20Commands_1.0.16.0_Test) - Fibaro Cortana Voice Commands_1.0.16.0_x64.cer, from github repository.
 **Example of Windows Certificate mmc** [here](https://technet.microsoft.com/en-us/library/dd632619.aspx).
 * On your windows machine -> **Start** -> **Run** -> **mmc**
