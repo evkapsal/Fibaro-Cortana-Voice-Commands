@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="Fibaro-Cortana-Voice-Commands" Publisher="CN=evkapsal" Version="1.0.16.0" ProcessorArchitecture="x64" />
+  <Identity Name="Fibaro-Cortana-Voice-Commands" Publisher="CN=evkapsal" Version="1.0.18.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="d66fb743-2e89-4405-b482-9c3e7bc98040" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Fibaro Cortana Voice Commands</DisplayName>
@@ -52,6 +52,7 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="privateNetworkClientServer" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

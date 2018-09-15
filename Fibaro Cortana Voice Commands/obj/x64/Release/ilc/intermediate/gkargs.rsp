@@ -2,6 +2,6 @@
 /Lib:"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\ilc\in"
 /Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\1.7.3\tools\x64\ilc\lib\Private"
 /WinMD:"C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\obj\x64\Release\ilc\in\WinMetadata\Windows.winmd"
-/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"33e08da1-2842-4006-bb27-c4c28969498a","Id":"3bbe0233-ebe3-46b2-a24d-c6f7490d8e1e","ProcessStartTime":636725991928581755}"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"33e08da1-2842-4006-bb27-c4c28969498a","Id":"a950a866-3ae6-415a-9205-c16d9b40fbfa","ProcessStartTime":636726202795957750}"
 /RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\1.7.3\tools\LibraryXML"
 /RunOnlyPreDR

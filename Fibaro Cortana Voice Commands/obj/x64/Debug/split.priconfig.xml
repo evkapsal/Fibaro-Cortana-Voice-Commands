@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="C:\Users\Vangelis\OneDrive\GitHub Repositories\Fibaro Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Debug\resources.pri">
+  <index root="\" startIndexAt="C:\Vag Projects\Cortana Voice Commands\Fibaro Cortana Voice Commands\bin\x64\Debug\resources.pri">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

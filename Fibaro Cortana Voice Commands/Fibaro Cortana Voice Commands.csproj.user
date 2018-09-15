@@ -22,4 +22,23 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <RemoteDebugMachine>192.168.1.249</RemoteDebugMachine>
+    <AuthenticationMode>Windows</AuthenticationMode>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+    <UseSimulator>false</UseSimulator>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <RemoteDebugMachine>192.168.1.249</RemoteDebugMachine>
+    <AuthenticationMode>None</AuthenticationMode>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+    <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
+    <UseEmulator>false</UseEmulator>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DebugEngines>
+    </DebugEngines>
+    <BackgroundTaskDebugEngines>
+    </BackgroundTaskDebugEngines>
+  </PropertyGroup>
 </Project>
